@@ -1,0 +1,29 @@
+{
+  "name": "IPtoCompany",
+  "description": "This plugin provides you with the name of the company which holds the IP that visited your website.",
+  "version": "0.1.0",
+  "theme": false,
+  "require": {
+    "piwik": ">=3.13.1-b1,<4.0.0-b1"
+  },
+  "authors": [
+    {
+      "name": "Matomo",
+      "email": "",
+      "homepage": ""
+    }
+  ],
+  "support": {
+	    "email": "",
+	    "issues": "",
+	    "forum": "",
+	    "irc": "",
+	    "wiki": "",
+	    "source": "",
+	    "docs": "",
+	    "rss": ""
+  },
+  "homepage": "",
+  "license": "GPL v3+",
+  "keywords": []
+}
