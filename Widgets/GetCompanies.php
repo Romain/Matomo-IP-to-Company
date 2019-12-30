@@ -82,7 +82,7 @@ class GetCompanies extends Widget
      */
     public function render()
     {
-        // or: return $this->renderTemplate('myViewTemplate', array(...view variables...));
+        return $this->renderTemplate('showCompanies', ["answerToLife" => 42]);
 
         return '<div class="widgetBody">My Widget Text</div>';
     }
