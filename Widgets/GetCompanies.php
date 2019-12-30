@@ -12,6 +12,7 @@ use Piwik\Widget\Widget;
 use Piwik\Widget\WidgetConfig;
 use Piwik\View;
 use Piwik\Translation\Translator;
+use Piwik\Common;
 
 /**
  * This class allows you to add your own widget to the Piwik platform. In case you want to remove widgets from another
