@@ -83,8 +83,7 @@ class GetCompanies extends Widget
     public function render()
     {
         return $this->renderTemplate('showCompanies', [
-            "siteName"      => "Foo",
-            "answerToLife"  => 42
+            'answerToLife'  => 42
         ]);
     }
 
