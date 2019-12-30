@@ -91,8 +91,7 @@ class GetCompanies extends Widget
         $view = new View('@IPtoCompany/_showCompanies');
         $view->answerToLife = 42;
 
-        $view->render();
-        return;
+        return $view->render();
     }
 
 }
