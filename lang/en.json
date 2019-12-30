@@ -1,6 +1,7 @@
 {
     "IPtoCompany": {
         "CorrespondanceIPtoCompanies": "Correspondance IP to Companies",
+        "IP_Companies": "Companies",
         "Companies": "Companies"
     }
 }
