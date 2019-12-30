@@ -88,9 +88,11 @@ class GetCompanies extends Widget
         // $idSite = Common::getRequestVar('idSite');
         // $site = new Site($idSite);
 
-        $output = "<h2>$this->translator->translate('IPtoCompany_CorrespondanceIPtoCompanies')</h2>";
+        $output = '<div class="widget-body">';
+        $output .= "<h2>$this->translator->translate('IPtoCompany_CorrespondanceIPtoCompanies')</h2>";
         $output .= "<br/>";
         $output .= "The answer to life is ";
+        $output .= "</div>";
 
         // return $this->renderTemplate('showCompanies', []);
         return $ouput;
