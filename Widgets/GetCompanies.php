@@ -13,6 +13,7 @@ use Piwik\Widget\WidgetConfig;
 use Piwik\View;
 use Piwik\Translation\Translator;
 use Piwik\Common;
+use Piwik\Site;
 
 /**
  * This class allows you to add your own widget to the Piwik platform. In case you want to remove widgets from another
@@ -85,12 +86,13 @@ class GetCompanies extends Widget
     {
         // Get the ID of the current site
         $idSite = Common::getRequestVar('idSite');
+        $site = new Site($idSite);
 
-        return $this->renderTemplate('showCompanies', [
-            'siteName'      => $idSite,
-            'isCustomLogo'  => true,
-            'answerToLife'  => 42
-        ]);
+        $view = new View('@IPtoCompany/showCompanies');
+        $view->answerToLife = 42;
+
+        $view->render();
+        return;
     }
 
 }
