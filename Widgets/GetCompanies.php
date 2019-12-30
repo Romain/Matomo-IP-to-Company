@@ -88,10 +88,7 @@ class GetCompanies extends Widget
         $idSite = Common::getRequestVar('idSite');
         $site = new Site($idSite);
 
-        $view = new View('@IPtoCompany/_showCompanies');
-        $view->answerToLife = 42;
-
-        return $view->render();
+        return $this->renderTemplate('showCompanies', []);
     }
 
 }
