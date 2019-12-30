@@ -82,7 +82,12 @@ class GetCompanies extends Widget
      */
     public function render()
     {
+        // Get the ID of the current site
+        $idSite = Common::getRequestVar('idSite');
+
         return $this->renderTemplate('showCompanies', [
+            'siteName'      => $idSite,
+            'isCustomLogo'  => true,
             'answerToLife'  => 42
         ]);
     }
