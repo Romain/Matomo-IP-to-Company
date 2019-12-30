@@ -49,7 +49,7 @@ class GetCompanies extends Widget
         /**
          * Set the name of the widget belongs to.
          */
-        $config->setName('IPtoCompany');
+        $config->setName($this->translator->translate('IPtoCompany_Companies'));
 
         /**
          * Set the order of the widget. The lower the number, the earlier the widget will be listed within a category.
@@ -85,10 +85,15 @@ class GetCompanies extends Widget
     public function render()
     {
         // Get the ID of the current site
-        $idSite = Common::getRequestVar('idSite');
-        $site = new Site($idSite);
+        // $idSite = Common::getRequestVar('idSite');
+        // $site = new Site($idSite);
 
-        return $this->renderTemplate('showCompanies', []);
+        $output = "<h2>$this->translator->translate('IPtoCompany_CorrespondanceIPtoCompanies')</h2>";
+        $output .= "<br/>";
+        $output .= "The answer to life is ";
+
+        // return $this->renderTemplate('showCompanies', []);
+        return $ouput;
     }
 
 }
