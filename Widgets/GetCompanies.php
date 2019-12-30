@@ -49,7 +49,7 @@ class GetCompanies extends Widget
         /**
          * Set the name of the widget belongs to.
          */
-        $config->setName('Companies');
+        $config->setName('IPtoCompany');
 
         /**
          * Set the order of the widget. The lower the number, the earlier the widget will be listed within a category.
