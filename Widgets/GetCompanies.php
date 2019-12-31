@@ -50,6 +50,16 @@ class GetCompanies extends Widget
          */
         $config->setOrder(10);
 
+        /*
+         * Set the name of the module (aka plugin name) of the widget.
+         */
+        $config->setModule('IPtoCompany_Companies');
+
+        /*
+         * Set the action of the widget that shall be used in the URL to render the widget.
+         */
+        $config->setAction('showCompanies');
+
         /**
          * Optionally set URL parameters that will be used when this widget is requested.
          * $config->setParameters(array('myparam' => 'myvalue'));
@@ -67,6 +77,7 @@ class GetCompanies extends Widget
          *     $config->disable();
          */
          $config->setIsEnabled(!Piwik::isUserIsAnonymous());
+         $config->setIsWidgetizable();
     }
 
     /**
