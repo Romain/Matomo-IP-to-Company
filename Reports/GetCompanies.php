@@ -12,7 +12,7 @@ use Piwik\Piwik;
 use Piwik\Plugin\Report;
 use Piwik\Plugin\ViewDataTable;
 use Piwik\Widget\WidgetsList;
-use Piwil\Report\ReportWidgetFactory;
+use Piwik\Report\ReportWidgetFactory;
 
 use Piwik\View;
 
