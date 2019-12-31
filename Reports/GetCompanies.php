@@ -36,7 +36,19 @@ class GetCompanies extends Base
         $this->order = 26;
 
         // By default standard metrics are defined but you can customize them by defining an array of metric names
-        // $this->metrics       = array('nb_visits', 'nb_hits');
+        $this->metrics = [
+            'IP',
+            'company',
+            'last_visit_time',
+            'type',
+            'nb_visits',
+            'last_visit_duration',
+            'referrer_type',
+            'referrer_name',
+            'device',
+            'country',
+            'city'
+        ];
 
         // Uncomment the next line if your report does not contain any processed metrics, otherwise default
         // processed metrics will be assigned
@@ -68,11 +80,22 @@ class GetCompanies extends Base
             $view->config->addTranslations(array('label' => $this->dimension->getName()));
         }
 
-        // $view->config->show_search = false;
-        // $view->requestConfig->filter_sort_column = 'nb_visits';
+        $view->config->show_search = true;
+        $view->requestConfig->filter_sort_column = 'nb_visits';
         // $view->requestConfig->filter_limit = 10';
 
-        $view->config->columns_to_display = array_merge(array('label'), $this->metrics);
+        $view->config->addTranslation('company', Piwik::translate('IPtoCompany_Company'));
+        $view->config->addTranslation('last_visit_time', Piwik::translate('IPtoCompany_LastVisit'));
+        $view->config->addTranslation('type', Piwik::translate('IPtoCompany_Type'));
+        $view->config->addTranslation('nb_visits', Piwik::translate('IPtoCompany_NumberOfVisits'));
+        $view->config->addTranslation('last_visit_duration', Piwik::translate('IPtoCompany_LastVisitDuration'));
+        $view->config->addTranslation('referrer_type', Piwik::translate('IPtoCompany_ReferrerType'));
+        $view->config->addTranslation('referrer_name', Piwik::translate('IPtoCompany_ReferrerName'));
+        $view->config->addTranslation('device', Piwik::translate('IPtoCompany_Device'));
+        $view->config->addTranslation('country', Piwik::translate('IPtoCompany_Country'));
+        $view->config->addTranslation('city', Piwik::translate('IPtoCompany_City'));
+
+        $view->config->columns_to_display = array_merge($this->metrics);
     }
 
     /**

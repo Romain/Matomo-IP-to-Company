@@ -11,6 +11,7 @@ namespace Piwik\Plugins\IPtoCompany;
 use Piwik\DataTable;
 use Piwik\DataTable\Row;
 use Piwik\Piwik;
+use Piwik\API\Request;
 
 /**
  * API for plugin IPtoCompany
@@ -30,109 +31,45 @@ class API extends \Piwik\Plugin\API
      */
     public function getCompanies($idSite, $period, $date, $segment = false)
     {
-        // Get the environment paramters
-        $this->getEnvParameters();
+        $response = Request::processRequest('Live.getLastVisitsDetails', [
+            'idSite'        => $idSite,
+            'period'        => $period,
+            'date'          => $date,
+            // 'token_auth'    => $_ENV['AUTH_TOKEN']
+        ]);
 
-        // Send a request to the Live! plugin to get the details of the last visits
-        $baseUrl    = $this->getBaseUrl();
-        $request    = $this->constructRequest($idSite, $period, $date);
+        $result = $response->getEmptyClone($keepFilters = false);
 
-        // Send cURL request
-        try {
-            $curl       = curl_init();
-            curl_setopt($curl, CURLOPT_URL, $baseUrl . $request);
-            curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-            $response   = curl_exec($curl);
-            curl_close($curl);
-        }
-        catch(\Exception $e) {
-            // Do something with the exception
-        }
+        foreach ($response->getRows() as $visitRow) {
+            $visitIp = $visitRow->getColumn('visitIp');
 
-        // Decode the response to use the JSON
-        $response = json_decode($response);
+            // try and get the row in the result DataTable for the IP
+            $ipRow = $result->getRowFromLabel($visitIp);
 
-        // Format the response to only keep the important data
-        $data = [];
-        foreach ($response as $item) {
-            $data[] = [
-                "ip"                => $item->visitIp,
-                "time"              => $item->lastActionDateTime,
-                "company"           => gethostbyaddr($item->visitIp),
-                "type"              => $item->visitorType,
-                "count"             => $item->visitCount,
-                "visit duration"    => $item->visitDurationPretty,
-                "referrer type"     => $item->referrerType,
-                "referrer name"     => $item->referrerName,
-                "device"            => $item->deviceType,
-                "country"           => $item->country,
-                "city"              => $item->city
-            ];
-        }
+            // if there is no row for this browser, create it
+            if ($ipRow === false) {
+                $result->addRowFromSimpleArray(array(
+                    'IP'     => $visitIp,
+                    'company'   => gethostbyaddr($visitIp),
+                    'last_visit_time'   => $visitRow->getColumn('lastActionDateTime'),
+                    'type'   => $visitRow->getColumn('visitorType'),
+                    'nb_visits'   => $visitRow->getColumn('visitCount'),
+                    'last_visit_duration'   => $visitRow->getColumn('visitDurationPretty'),
+                    'referrer_type'   => $visitRow->getColumn('referrerType'),
+                    'referrer_name'   => $visitRow->getColumn('referrerName'),
+                    'device'   => $visitRow->getColumn('deviceType'),
+                    'country'   => $visitRow->getColumn('country'),
+                    'city'   => $visitRow->getColumn('city'),
+                ));
+            }
 
-        $table = new DataTable();
-
-        $table->addRowsFromSimpleArray($data);
-
-        return $table;
-    }
-
-    /**
-     * Load the environment parameters
-     */
-    private function getEnvParameters()
-    {
-        // Set the path of the env file
-        $path       = __DIR__.'/.env';
-        $fp         = fopen($path, 'r');
-
-        // Parse the process and add the parameters to the environment
-        while (!feof($fp))
-        {
-            $line = fgets($fp);
-
-            // Process line however you like
-            $line = trim($line);
-
-            // For each line, separate the name of the param from its value
-            $values = explode("=", $line);
-
-            // Add them to the environment
-            if(count($values) == 2) {
-                $_ENV[$values[0]] = $values[1];
+            // if there is a row, increment the counter
+            else {
+                // $counter = $browserRow->getColumn('nb_visits');
+                // $browserRow->setColumn('nb_visits', $counter + 1);
             }
         }
 
-        // Close the process
-        fclose($fp);
-    }
-
-    private function getBaseUrl()
-    {
-        return sprintf(
-            "%s://%s/",
-            isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
-            !empty($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'localhost:8888/Matomo'
-        );
-    }
-
-    /**
-     * Another example method that returns a data table.
-     * @param int    $idSite
-     * @param string $period
-     * @param string $date
-     * @return DataTable
-     */
-    private function constructRequest($idSite, $period, $date)
-    {
-        $request    = "?module=API"
-                    . "&method=Live.getLastVisitsDetails"
-                    . "&idSite=" . $idSite
-                    . "&period=" . $period
-                    . "&date=" . $date
-                    . "&format=JSON"
-                    . "&token_auth=" . $_ENV['AUTH_TOKEN'];
-
-        return $request;
+        return $result;
     }
 }

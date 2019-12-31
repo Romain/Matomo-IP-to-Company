@@ -4,6 +4,15 @@
         "IP_Companies": "Companies",
         "Companies": "Companies",
         "IPSelection": "Here comes the set of IPs that visited this website for the selected period.",
-        "AssociatedToTheCompanyRetrieved": "They are all associated to the company retrieved for each of them."
+        "AssociatedToTheCompanyRetrieved": "They are all associated to the company retrieved for each of them.",
+        "Company": "Company",
+        "LastVisit": "Last visit",
+        "Type": "Type",
+        "LastVisitDuration": "Last visit duration",
+        "ReferrerType": "Referrer type",
+        "ReferrerName": "Referrer name",
+        "Device": "Device",
+        "Country": "Country",
+        "City": "City"
     }
 }
