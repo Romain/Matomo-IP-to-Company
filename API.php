@@ -27,7 +27,7 @@ class API extends \Piwik\Plugin\API
      * @param bool|string $segment
      * @return DataTable
      */
-    public function getFoo($idSite, $period, $date, $segment = false)
+    public function getCompanies($idSite, $period, $date, $segment = false)
     {
         $table = new DataTable();
 
