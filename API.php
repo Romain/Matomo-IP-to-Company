@@ -53,7 +53,7 @@ class API extends \Piwik\Plugin\API
     private function getEnvParameters()
     {
         // Set the path of the env file
-        $path       = __DIR__.'/../.env';
+        $path       = __DIR__.'/.env';
         $fp         = fopen($path, 'r');
 
         // Parse the process and add the parameters to the environment
