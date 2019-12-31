@@ -13,6 +13,8 @@ use Piwik\Widget\WidgetConfig;
 use Piwik\Common;
 use Piwik\Piwik;
 use Piwik\Site;
+use GuzzleHttp\Client;
+
 
 /**
  * This class allows you to add your own widget to the Piwik platform. In case you want to remove widgets from another
@@ -105,11 +107,17 @@ class GetCompanies extends Widget
         $template = 'showCompanies';
 
         // Get the ID of the current site
-        // $idSite = Common::getRequestVar('idSite');
+        $idSite = Common::getRequestVar('idSite');
         // $site = new Site($idSite);
 
+        // Get the selected period
+        $period = Common::getRequestVar('period');
+
+        // Send a request to the API to get the visits during the selected period
+
         return $this->renderTemplate($template, [
-            "api_token" => $_ENV['AUTH_TOKEN']
+            "api_token" => $_ENV['AUTH_TOKEN'],
+            "period"    => $period
         ]);
     }
 

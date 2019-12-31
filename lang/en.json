@@ -3,7 +3,7 @@
         "CorrespondanceIPtoCompanies": "Correspondance IP to Companies",
         "IP_Companies": "Companies",
         "Companies": "Companies",
-        "IPSelection": "Here comes the set of the last 50 IPs that visited this website.",
+        "IPSelection": "Here comes the set of IPs that visited this website for the selected period.",
         "AssociatedToTheCompanyRetrieved": "They are all associated to the company retrieved for each of them."
     }
 }
