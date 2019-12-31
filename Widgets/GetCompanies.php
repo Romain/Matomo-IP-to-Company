@@ -74,7 +74,7 @@ class GetCompanies extends Widget
         /*
          * Set the name of the module (aka plugin name) of the widget.
          */
-        $config->setModule('IPtoCompany_Companies');
+        // $config->setModule('IPtoCompany_Companies');
 
         /*
          * Set the action of the widget that shall be used in the URL to render the widget.
