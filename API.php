@@ -43,16 +43,33 @@ class API extends \Piwik\Plugin\API
             curl_setopt($curl, CURLOPT_URL, $baseUrl . $request);
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
             $response   = curl_exec($curl);
-            var_dump($response);
             curl_close($curl);
         }
         catch(\Exception $e) {
             // Do something with the exception
         }
 
+        // Format the response to only keep the important data
+        $data = [];
+        foreach ($response as $item) {
+            $data[] = [
+                "ip"                => $item->visitIp,
+                "time"              => $item->lastActionDateTime,
+                "company"           => gethostbyaddr($item->visitIp),
+                "type"              => $item->visitorType,
+                "count"             => $item->visitCount,
+                "visit duration"    => $item->visitDurationPretty,
+                "referrer type"     => $item->referrerType,
+                "referrer name"     => $item->referrerName,
+                "device"            => $item->deviceType,
+                "country"           => $item->country,
+                "city"              => $item->city
+            ];
+        }
+
         $table = new DataTable();
 
-        $table->addRowFromArray(array(Row::COLUMNS => array('nb_visits' => 5)));
+        $table->addRowFromArray(array(Row::COLUMNS => $data));
 
         return $table;
     }
