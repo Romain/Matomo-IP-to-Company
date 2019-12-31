@@ -39,8 +39,6 @@ class API extends \Piwik\Plugin\API
 
         // Send cURL request
         try {
-            var_dump($baseUrl);
-            var_dump($request);
             $curl       = curl_init();
             curl_setopt($curl, CURLOPT_URL, $baseUrl . $request);
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
@@ -92,9 +90,9 @@ class API extends \Piwik\Plugin\API
     private function getBaseUrl()
     {
         return sprintf(
-            "%s://%s",
+            "%s://%s/",
             isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
-            !empty($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'localhost:8888'
+            !empty($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'localhost:8888/Matomo'
         );
     }
 
