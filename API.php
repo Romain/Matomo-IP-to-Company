@@ -90,6 +90,7 @@ class API extends \Piwik\Plugin\API
     }
 
     private function getBaseUrl()
+    {
         return sprintf(
             "%s://%s",
             isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
