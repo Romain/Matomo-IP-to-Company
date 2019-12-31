@@ -13,9 +13,16 @@ use Piwik\Plugin;
 use Piwik\SettingsPiwik;
 use Piwik\Widget\WidgetsList;
 use Piwik\Plugins\IPtoCompany\Widgets\GetCompanies;
+use Symfony\Component\Dotenv\Dotenv;
 
 class IPtoCompany extends \Piwik\Plugin
 {
+    public function __construct()
+    {
+        $dotenv = new Dotenv();
+        $dotenv->load(__DIR__.'/.env');
+    }
+
     /**
      * @see \Piwik\Plugin::registerEvents
      */

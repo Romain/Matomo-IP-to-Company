@@ -98,7 +98,7 @@ class GetCompanies extends Widget
         // $site = new Site($idSite);
 
         return $this->renderTemplate($template, [
-
+            "api_token" => $_ENV['AUTH_TOKEN']
         ]);
     }
 
