@@ -110,14 +110,16 @@ class GetCompanies extends Widget
         $idSite = Common::getRequestVar('idSite');
         // $site = new Site($idSite);
 
-        // Get the selected period
+        // Get the selected period and date(s)
         $period = Common::getRequestVar('period');
+        $date   = Common::getRequestVar('date');
 
         // Send a request to the API to get the visits during the selected period
 
         return $this->renderTemplate($template, [
             "api_token" => $_ENV['AUTH_TOKEN'],
-            "period"    => $period
+            "period"    => $period,
+            "date"      => $date
         ]);
     }
 
