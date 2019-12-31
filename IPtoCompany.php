@@ -15,6 +15,8 @@ use Piwik\Widget\WidgetsList;
 use Piwik\Plugins\IPtoCompany\Widgets\GetCompanies;
 use Symfony\Component\Dotenv\Dotenv;
 
+require __DIR__ . '/vendor/autoload.php';
+
 class IPtoCompany extends \Piwik\Plugin
 {
     public function __construct()
