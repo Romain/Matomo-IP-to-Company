@@ -53,26 +53,23 @@ class API extends \Piwik\Plugin\API
         $data = [];
         foreach ($response as $item) {
             $data[] = [
-                Row::COLUMNS => [
-                    "ip"                => $item->visitIp,
-                    "time"              => $item->lastActionDateTime,
-                    "company"           => gethostbyaddr($item->visitIp),
-                    "type"              => $item->visitorType,
-                    "count"             => $item->visitCount,
-                    "visit duration"    => $item->visitDurationPretty,
-                    "referrer type"     => $item->referrerType,
-                    "referrer name"     => $item->referrerName,
-                    "device"            => $item->deviceType,
-                    "country"           => $item->country,
-                    "city"              => $item->city
-                ],
-                Row::METADATA => []
+                "ip"                => $item->visitIp,
+                "time"              => $item->lastActionDateTime,
+                "company"           => gethostbyaddr($item->visitIp),
+                "type"              => $item->visitorType,
+                "count"             => $item->visitCount,
+                "visit duration"    => $item->visitDurationPretty,
+                "referrer type"     => $item->referrerType,
+                "referrer name"     => $item->referrerName,
+                "device"            => $item->deviceType,
+                "country"           => $item->country,
+                "city"              => $item->city
             ];
         }
 
         $table = new DataTable();
 
-        $table->addRowsFromArray(array(Row::COLUMNS => $data));
+        $table->addRowsFromSimpleArray(array(Row::COLUMNS => $data));
 
         return $table;
     }
