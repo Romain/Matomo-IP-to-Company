@@ -49,6 +49,9 @@ class API extends \Piwik\Plugin\API
             // Do something with the exception
         }
 
+        // Decode the response to use the JSON
+        $response = json_decode($response);
+
         // Format the response to only keep the important data
         $data = [];
         foreach ($response as $item) {
@@ -69,7 +72,7 @@ class API extends \Piwik\Plugin\API
 
         $table = new DataTable();
 
-        $table->addRowsFromSimpleArray(array(Row::COLUMNS => $data));
+        $table->addRowsFromSimpleArray($data);
 
         return $table;
     }
