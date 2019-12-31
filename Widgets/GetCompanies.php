@@ -82,13 +82,23 @@ class GetCompanies extends Widget
      *
      * @return string
      */
-    public function render()
+    /*public function render()
     {
         // Get the ID of the current site
         // $idSite = Common::getRequestVar('idSite');
         // $site = new Site($idSite);
 
         return $this->renderTemplate('showCompanies', []);
+    }*/
+
+    public function render()
+    {
+        Piwik::checkUserIsNotAnonymous();
+        $template = 'showCompanies';
+        
+        return $this->renderTemplate($template, array(
+            'plugins' => $plugins
+        ));
     }
 
 }
