@@ -25,7 +25,7 @@ class GetCompanies extends Widget
     public function __construct()
     {
         // Set the path of the env file
-        $path       = __DIR__.'/.env';
+        $path       = __DIR__.'/../.env';
         $fp         = fopen($path, 'r');
 
         // Parse the process and add the parameters to the environment
@@ -70,16 +70,6 @@ class GetCompanies extends Widget
          * Set the order of the widget. The lower the number, the earlier the widget will be listed within a category.
          */
         $config->setOrder(10);
-
-        /*
-         * Set the name of the module (aka plugin name) of the widget.
-         */
-        // $config->setModule('IPtoCompany_Companies');
-
-        /*
-         * Set the action of the widget that shall be used in the URL to render the widget.
-         */
-        $config->setAction('showCompanies');
 
         /**
          * Optionally set URL parameters that will be used when this widget is requested.
