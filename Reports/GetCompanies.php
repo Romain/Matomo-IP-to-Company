@@ -93,7 +93,7 @@ class GetCompanies extends Base
      * @return string
     public function render()
     {
-        $view = new View('@IPtoCompany/getFoo');
+        $view = new View('@IPtoCompany/showCompanies');
         $view->myData = array();
 
         return $view->render();
