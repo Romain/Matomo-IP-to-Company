@@ -16,11 +16,6 @@ use Piwik\Plugins\IPtoCompany\Widgets\GetCompanies;
 
 class IPtoCompany extends \Piwik\Plugin
 {
-    public function __construct()
-    {
-        
-    }
-
     /**
      * @see \Piwik\Plugin::registerEvents
      */
