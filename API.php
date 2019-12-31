@@ -36,7 +36,7 @@ class API extends \Piwik\Plugin\API
 
         // Send a request to the Live! plugin to get the details of the last visits
         $baseUrl    = $this->getBaseUrl();
-        $request    = $this->constructRequest();
+        $request    = $this->constructRequest($idSite, $period, $date);
         $response = $client->get($baseUrl . $request);
         var_dump($response);
 
