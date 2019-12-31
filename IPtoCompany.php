@@ -49,7 +49,7 @@ class IPtoCompany extends \Piwik\Plugin
     public function filterWidgets($list)
     {
         if (!SettingsPiwik::isInternetEnabled()) {
-            $list->remove('Marketplace_Marketplace');
+            $list->remove('IPtoCompany_Companies');
         }
     }
 }
