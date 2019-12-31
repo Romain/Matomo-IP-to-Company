@@ -24,7 +24,28 @@ class GetCompanies extends Widget
 {
     public function __construct()
     {
+        // Set the path of the env file
+        $path       = __DIR__.'/.env';
+        $fp         = fopen($path, 'r');
 
+        // Parse the process and add the parameters to the environment
+        while (!feof($fp))
+        {
+            $line = fgets($fp);
+
+            // Process line however you like
+            $line = trim($line);
+
+            $values = explode("=", $line);
+
+            // Add to environment
+            if(count($values) == 2) {
+                $_ENV[$values[0]] = $values[1];
+            }
+        }
+
+        // Close the process
+        fclose($fp);
     }
 
     public static function configure(WidgetConfig $config)

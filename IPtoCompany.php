@@ -13,16 +13,12 @@ use Piwik\Plugin;
 use Piwik\SettingsPiwik;
 use Piwik\Widget\WidgetsList;
 use Piwik\Plugins\IPtoCompany\Widgets\GetCompanies;
-use Symfony\Component\Dotenv\Dotenv;
-
-require __DIR__ . '/vendor/autoload.php';
 
 class IPtoCompany extends \Piwik\Plugin
 {
     public function __construct()
     {
-        $dotenv = new Dotenv();
-        $dotenv->load(__DIR__.'/.env');
+        
     }
 
     /**
@@ -59,6 +55,21 @@ class IPtoCompany extends \Piwik\Plugin
     {
         if (!SettingsPiwik::isInternetEnabled()) {
             $list->remove('Marketplace_Marketplace');
+        }
+    }
+
+
+    /**
+     * Sets values as environment variables (via putenv, $_ENV, and $_SERVER).
+     *
+     * @param array $values               An array of env variables
+     * @param bool  $overrideExistingVars true when existing environment variables must be overridden
+     */
+    private function populate(array $values, bool $overrideExistingVars = false): void
+    {
+        foreach ($values as $name => $value) {
+
+            // $_ENV[$name] = $value;
         }
     }
 }
