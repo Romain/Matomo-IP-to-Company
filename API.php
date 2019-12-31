@@ -11,7 +11,6 @@ namespace Piwik\Plugins\IPtoCompany;
 use Piwik\DataTable;
 use Piwik\DataTable\Row;
 use Piwik\Piwik;
-use GuzzleHttp\Client;
 
 /**
  * API for plugin IPtoCompany
@@ -37,8 +36,21 @@ class API extends \Piwik\Plugin\API
         // Send a request to the Live! plugin to get the details of the last visits
         $baseUrl    = $this->getBaseUrl();
         $request    = $this->constructRequest($idSite, $period, $date);
-        $response = $client->get($baseUrl . $request);
-        var_dump($response);
+
+        // Send cURL request
+        try {
+            var_dump($baseUrl);
+            var_dump($request);
+            $curl       = curl_init();
+            curl_setopt($curl, CURLOPT_URL, $baseUrl . $request);
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+            $response   = curl_exec($curl);
+            var_dump($response);
+            curl_close($curl);
+        }
+        catch(\Exception $e) {
+            // Do something with the exception
+        }
 
         $table = new DataTable();
 

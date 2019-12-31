@@ -12,7 +12,6 @@ use Piwik\Piwik;
 use Piwik\Plugin;
 use Piwik\SettingsPiwik;
 use Piwik\Widget\WidgetsList;
-// use Piwik\Plugins\IPtoCompany\Widgets\GetCompanies;
 
 class IPtoCompany extends \Piwik\Plugin
 {
