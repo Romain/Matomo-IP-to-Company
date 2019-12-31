@@ -85,6 +85,16 @@ class GetCompanies extends Base
     }
 
     /**
+     * Here we define a method to be able to create a widget with this report.
+     */
+    public function configureWidgets(WidgetsList $widgetsList, ReportWidgetFactory $factory)
+    {
+        // we have to do it manually since it's only done automatically if a subcategoryId is specified,
+        // we do not set a subcategoryId since this report is not supposed to be shown in the UI
+        $widgetsList->addWidgetConfig($factory->createWidget());
+    }
+
+    /**
      * A report is usually completely automatically rendered for you but you can render the report completely
      * customized if you wish. Just overwrite the method and make sure to return a string containing the content of the
      * report. Don't forget to create the defined twig template within the templates folder of your plugin in order to
