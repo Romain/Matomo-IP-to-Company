@@ -10,9 +10,8 @@ namespace Piwik\Plugins\IPtoCompany\Widgets;
 
 use Piwik\Widget\Widget;
 use Piwik\Widget\WidgetConfig;
-use Piwik\View;
-use Piwik\Translation\Translator;
 use Piwik\Common;
+use Piwik\Piwik;
 use Piwik\Site;
 
 /**
@@ -23,15 +22,10 @@ use Piwik\Site;
  */
 class GetCompanies extends Widget
 {
-    /**
-      * @var Translator
-      */
-     private $translator;
+    public function __construct()
+    {
 
-     public function __construct(Translator $translator)
-     {
-         $this->translator = $translator;
-     }
+    }
 
     public static function configure(WidgetConfig $config)
     {
@@ -44,12 +38,12 @@ class GetCompanies extends Widget
         /**
          * Set the subcategory the widget belongs to. If a subcategory is set, the widget will be shown in the UI.
          */
-        $config->setSubcategoryId('IP_Companies');
+        $config->setSubcategoryId('IPtoCompany_Companies');
 
         /**
          * Set the name of the widget belongs to.
          */
-        $config->setName($this->translator->translate('IPtoCompany_Companies'));
+        $config->setName(Piwik::translate('IPtoCompany_Companies'));
 
         /**
          * Set the order of the widget. The lower the number, the earlier the widget will be listed within a category.
@@ -72,6 +66,7 @@ class GetCompanies extends Widget
          * if (!\Piwik\Piwik::hasUserSuperUserAccess())
          *     $config->disable();
          */
+         $config->setIsEnabled(!Piwik::isUserIsAnonymous());
     }
 
     /**
@@ -82,23 +77,18 @@ class GetCompanies extends Widget
      *
      * @return string
      */
-    /*public function render()
-    {
-        // Get the ID of the current site
-        // $idSite = Common::getRequestVar('idSite');
-        // $site = new Site($idSite);
-
-        return $this->renderTemplate('showCompanies', []);
-    }*/
-
     public function render()
     {
         Piwik::checkUserIsNotAnonymous();
         $template = 'showCompanies';
-        
-        return $this->renderTemplate($template, array(
-            'plugins' => $plugins
-        ));
+
+        // Get the ID of the current site
+        // $idSite = Common::getRequestVar('idSite');
+        // $site = new Site($idSite);
+
+        return $this->renderTemplate($template, [
+
+        ]);
     }
 
 }
