@@ -22,20 +22,18 @@ class IPtoCompany extends \Piwik\Plugin
     public function registerEvents()
     {
         return array(
-            /*'AssetManager.getJavaScriptFiles' => 'getJsFiles',
-            'AssetManager.getStylesheetFiles' => 'getStylesheetFiles',*/
+            //'AssetManager.getJavaScriptFiles' => 'getJsFiles',
+            'AssetManager.getStylesheetFiles' => 'getStylesheetFiles',
             'Widget.filterWidgets' => 'filterWidgets'
         );
     }
 
-    /*public function getStylesheetFiles(&$stylesheets)
+    public function getStylesheetFiles(&$stylesheets)
     {
-        $stylesheets[] = "plugins/Marketplace/stylesheets/marketplace.less";
-        $stylesheets[] = "plugins/Marketplace/stylesheets/plugin-details.less";
-        $stylesheets[] = "plugins/Marketplace/stylesheets/marketplace-widget.less";
+        $stylesheets[] = "plugins/IPtoCompany/stylesheets/iptocompany.less";
     }
 
-    public function getJsFiles(&$jsFiles)
+    /*public function getJsFiles(&$jsFiles)
     {
         $jsFiles[] = "libs/bower_components/iframe-resizer/js/iframeResizer.min.js";
 
