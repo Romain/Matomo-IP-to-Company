@@ -13,6 +13,7 @@
         "ReferrerName": "Referrer name",
         "Device": "Device",
         "Country": "Country",
-        "City": "City"
+        "City": "City",
+        "NumberOfVisits": "Number of visits"
     }
 }
