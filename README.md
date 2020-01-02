@@ -8,6 +8,10 @@ This plugin is meant to be installed on Matomo. It provides you with the name of
 
 GPL v3 or later
 
+## Requirements
+
+Your Matomo version should be between 3.9.0 and below 4.0.0.
+
 ## Installation
 
 Install it via Matomo Marketplace.
