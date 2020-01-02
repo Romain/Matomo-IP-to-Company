@@ -10,20 +10,20 @@
     {
       "name": "Romain Biard",
       "email": "romain.biard@gmail.com",
-      "homepage": ""
+      "homepage": "https://www.linkedin.com/in/rbiard/"
     }
   ],
   "support": {
-	    "email": "romain.biard@wipsim.fr",
-	    "issues": "",
+	    "email": "romain.biard@gmail.com",
+	    "issues": "https://github.com/Romain/Matomo-IP-to-Company/issues",
 	    "forum": "",
 	    "irc": "",
-	    "wiki": "",
-	    "source": "",
+	    "wiki": "https://github.com/Romain/Matomo-IP-to-Company/wiki",
+	    "source": "https://github.com/Romain/Matomo-IP-to-Company",
 	    "docs": "",
 	    "rss": ""
   },
-  "homepage": "",
+  "homepage": "https://github.com/Romain/Matomo-IP-to-Company",
   "license": "GPL v3+",
-  "keywords": ["matomo"]
+  "keywords": ["ip", "company", "report", "companies"]
 }
