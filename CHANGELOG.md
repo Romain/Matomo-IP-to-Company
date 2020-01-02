@@ -1,5 +1,12 @@
 ## Changelog
 
+### 0.1.4
+
+*[2020-01-02]*
+
+- Changed the default requirements
+- Changed the name of the plugin
+
 ### 0.1.3
 
 *[2020-01-02]*
@@ -23,5 +30,6 @@
 *[2020-01-02]*
 
 First working version of the plugin:
+
 - creation of a report in the `Visitors` tab, called `Companies` with the list of IPs that visited the website, and the company name associated
 - ability to add a widget to the dashboards with this report
