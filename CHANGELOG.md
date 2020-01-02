@@ -1,5 +1,11 @@
 ## Changelog
 
+### 0.1.5
+
+*[2020-01-02]*
+
+- Rollback on the name of the plugin
+
 ### 0.1.4
 
 *[2020-01-02]*
