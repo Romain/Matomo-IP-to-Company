@@ -17,3 +17,7 @@ __Where to find the report once the plugin is activated?__
 Once you've activated your plugin, you'll see in the `Visitors` tab of each website a new `Companies` subcategory. This is were your new report lies.
 
 You can also add this report as a widget to your dashboards.
+
+__Which Matomo versions are compatible with this plugin?__
+
+Your Matomo version should be between 3.9.0 and below 4.0.0.
