@@ -20,4 +20,4 @@ You can also add this report as a widget to your dashboards.
 
 __Which Matomo versions are compatible with this plugin?__
 
-Your Matomo version should be between 3.9.0 and below 4.0.0.
+Your Matomo version should be between 3.11.0 and below 4.0.0.

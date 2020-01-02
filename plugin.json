@@ -1,10 +1,10 @@
 {
   "name": "IPtoCompany",
   "description": "Get the name of the companies that visit your website.",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "theme": false,
   "require": {
-    "piwik": ">=3.9.0"
+    "piwik": ">=3.11.0,<4.0.0-b1"
   },
   "authors": [
     {
@@ -16,12 +16,9 @@
   "support": {
 	    "email": "romain.biard@gmail.com",
 	    "issues": "https://github.com/Romain/Matomo-IP-to-Company/issues",
-	    "forum": "",
-	    "irc": "",
+	    "forum": "https://forum.matomo.org",
 	    "wiki": "https://github.com/Romain/Matomo-IP-to-Company/wiki",
-	    "source": "https://github.com/Romain/Matomo-IP-to-Company",
-	    "docs": "",
-	    "rss": ""
+	    "source": "https://github.com/Romain/Matomo-IP-to-Company"
   },
   "homepage": "https://github.com/Romain/Matomo-IP-to-Company",
   "license": "GPL v3+",
