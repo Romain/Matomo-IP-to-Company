@@ -1,0 +1,15 @@
+{
+    "IPtoCompany": {
+        "Companies": "Empresas",
+        "Company": "Empresa",
+        "LastVisit": "Última visita",
+        "Type": "Tipo",
+        "LastVisitDuration": "Duración de la última visita",
+        "ReferrerType": "Tipo de fuente",
+        "ReferrerName": "Nombre de la fuente",
+        "Device": "Soporte",
+        "Country": "País",
+        "City": "Ciudad",
+        "NumberOfVisits": "Número de visitas"
+    }
+}
