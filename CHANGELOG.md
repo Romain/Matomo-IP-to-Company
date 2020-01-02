@@ -1,5 +1,11 @@
 ## Changelog
 
+### 0.1.1
+
+*[2020-01-02]*
+
+- Improved the description of the plugin
+
 ### 0.1.0
 
 *[2020-01-02]*
