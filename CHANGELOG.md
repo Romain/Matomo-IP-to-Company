@@ -1,5 +1,11 @@
 ## Changelog
 
+### 0.1.2
+
+*[2020-01-02]*
+
+- Fixed a bug in the plugin version in the JSON file
+
 ### 0.1.1
 
 *[2020-01-02]*
