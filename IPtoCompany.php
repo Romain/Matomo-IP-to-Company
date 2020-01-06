@@ -21,7 +21,7 @@ class IPtoCompany extends \Piwik\Plugin
     /**
      * @see https://developer.matomo.org/guides/extending-database
      */
-    public function activate()
+    public function install()
     {
         try {
             $sql = "CREATE TABLE " . Common::prefixTable('ip_to_company') . " (
@@ -45,7 +45,7 @@ class IPtoCompany extends \Piwik\Plugin
     /**
      * @see https://developer.matomo.org/guides/extending-database
      */
-    public function deactivate()
+    public function uninstall()
     {
         Db::dropTables(Common::prefixTable('ip_to_company'));
     }
