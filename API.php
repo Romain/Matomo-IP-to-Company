@@ -40,17 +40,24 @@ class API extends \Piwik\Plugin\API
 
         $result = $response->getEmptyClone($keepFilters = false);
 
+        // Prepare an array containing the list of IP addresses to avoid multiple calls for the same IP address
+        $ipList = [];
+
         foreach ($response->getRows() as $visitRow) {
             $visitIp = $visitRow->getColumn('visitIp');
 
             // try and get the row in the result DataTable for the IP
             $ipRow = $result->getRowFromLabel($visitIp);
 
+            // Get the company name based on the IP
+            $ipList = $this->getCompanyName($visitIp, $ipList);
+            $companyName = $ipList[$visitIp];
+
             // if there is no row for this browser, create it
             if ($ipRow === false) {
                 $result->addRowFromSimpleArray(array(
                     'IP'     => $visitIp,
-                    'company'   => gethostbyaddr($visitIp),
+                    'company'   => $companyName,
                     'last_visit_time'   => $visitRow->getColumn('lastActionDateTime'),
                     'type'   => $visitRow->getColumn('visitorType'),
                     'nb_visits'   => $visitRow->getColumn('visitCount'),
@@ -71,5 +78,21 @@ class API extends \Piwik\Plugin\API
         }
 
         return $result;
+    }
+
+    /**
+     * Another example method that returns a data table.
+     * @param string    $ip
+     * @param array     $ipList
+     * @return array
+     */
+    private function getCompanyName($ip, $ipList)
+    {
+        if(!$ipList[$ip]) {
+            $companyName = gethostbyaddr($ip);
+            $ipList[$ip] = $companyName === $ip ? "-" : $companyName;
+        }
+
+        return $ipList;
     }
 }
