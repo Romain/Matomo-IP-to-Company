@@ -10,6 +10,8 @@
         "Device": "Device",
         "Country": "Country",
         "City": "City",
-        "NumberOfVisits": "Number of visits"
+        "NumberOfVisits": "Number of visits",
+        "YourIPInfoAccessToken": "Your IPinfo.io access token",
+        "PasteYourAccessToken": "Paste in the field below your access token."
     }
 }
