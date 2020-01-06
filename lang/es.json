@@ -10,6 +10,8 @@
         "Device": "Soporte",
         "Country": "País",
         "City": "Ciudad",
-        "NumberOfVisits": "Número de visitas"
+        "NumberOfVisits": "Número de visitas",
+        "YourIPInfoAccessToken": "Su ficha de acceso de IPinfo.io",
+        "PasteYourAccessToken": "Pega al lado su ficha de acceso."
     }
 }
