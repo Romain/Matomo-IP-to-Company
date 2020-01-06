@@ -4,7 +4,7 @@
 
 *[2020-01-06]*
 
-- Removed the `filter_sort_column` to avoid errors with Matomo 3.13.1-b2.
+- Removed the `filter_sort_column` to avoid warnings with Matomo 3.13.1-b2.
 
 ### 0.1.6
 
