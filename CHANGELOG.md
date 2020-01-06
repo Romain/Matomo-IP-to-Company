@@ -1,5 +1,15 @@
 ## Changelog
 
+### 0.2.0
+
+*[2020-01-06]*
+
+- Creation of an API endpoint to get the content of the table `ip_to_company`.
+- Cache the data gathered from IPInfo.io into the table during 1 week.
+- Creation of private methods to gather the content either from the table or from IPInfo.io.
+- Creation of a table `ip_to_company` upon activation.
+- Creation of a setting to store IPinfo.io access token.
+
 ### 0.1.7
 
 *[2020-01-06]*

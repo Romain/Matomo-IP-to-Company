@@ -4,6 +4,10 @@
 
 This plugin is meant to be installed on Matomo. It provides you with the name of the company which holds the IP that visited your website.
 
+You can also use [IPInfo.io](https://ipinfo.io/) to get a more reliable result if you have an account. You will just have to set your access token in the General Parameters of Matomo.
+
+This plugin has first been developed for the needs of the company I've been working for, [Wipsim](https://www.wipsim.fr/?pk_campaign=MatomoPlugin-Link&pk_source=matomoplugin&pk_medium=matomo)
+
 ## License
 
 GPL v3 or later
@@ -29,3 +33,5 @@ The collected company names are based on the PHP function `gethostbyaddr`. This 
 Most of the big companies have their own proxy set up with a real name configured. But SMBs may not and in this case, you could see the name of their ISP appear.
 
 Therefore, this information is not 100% reliable but this is still an interesting information to check from time to time.
+
+If you have an access token set up for [IPInfo.io](https://ipinfo.io/), this plugin will use this data in the first place, before falling back to `gethostbyaddr`;
