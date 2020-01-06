@@ -15,7 +15,6 @@ use Piwik\DataTable\Row;
 use Piwik\Piwik;
 use Piwik\API\Request;
 use Piwik\Plugins\IPtoCompany\Libraries\IPInfo;
-use Piwik\Container\StaticContainer;
 use \Exception;
 
 /**
@@ -119,8 +118,6 @@ class API extends \Piwik\Plugin\API
      */
     private function getIPDetails($ip, $ipList, $dbList)
     {
-        $logger = StaticContainer::getContainer()->get('Psr\Log\LoggerInterface');
-
         $itemFound      = FALSE;
         $companyName    = NULL;
         $hostname       = gethostbyaddr($ip);
@@ -139,14 +136,16 @@ class API extends \Piwik\Plugin\API
                 }
                 elseif(($item['ip'] == $ip) && ($itemDate < $oneWeekAgo)) {
                     $companyDetails = $this->getCompanyDetails($ip);
-                    $logger->error(var_export($companyDetails, TRUE));
                     $companyName    = $companyDetails['as_name'];
                     $itemFound      = TRUE;
                     $ipList[$ip] = $companyName ? $companyName : ($hostname === $ip ? "-" : $hostname);
-                    $this->updateCompanyDetails($item, [
-                        'as_number' => $companyDetails['as_number'],
-                        'as_name'   => $companyName
-                    ]);
+
+                    if($ipList[$ip] != $hostname) {
+                        $this->updateCompanyDetails($item, [
+                            'as_number' => $companyDetails['as_number'],
+                            'as_name'   => $companyDetails['as_name']
+                        ]);
+                    }
                 }
             }
         }
@@ -156,11 +155,14 @@ class API extends \Piwik\Plugin\API
             $companyName    = $companyDetails['as_name'];
             $itemFound      = TRUE;
             $ipList[$ip] = $companyName ? $companyName : ($hostname === $ip ? "-" : $hostname);
-            $this->insertCompanyDetails([
-                'ip'        => $ip,
-                'as_number' => $companyDetails['as_number'],
-                'as_name'   => $companyName
-            ]);
+
+            if($ipList[$ip] != $hostname) {
+                $this->insertCompanyDetails([
+                    'ip'        => $ip,
+                    'as_number' => $companyDetails['as_number'],
+                    'as_name'   => $companyDetails['as_name']
+                ]);
+            }
         }
 
         return $ipList;
