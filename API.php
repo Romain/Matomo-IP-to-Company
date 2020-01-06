@@ -78,10 +78,10 @@ class API extends \Piwik\Plugin\API
             }
 
             // if there is a row, increment the counter
-            else {
+            /*else {
                 $counter = $ipRow->getColumn('nb_visits');
                 $ipRow->setColumn('nb_visits', $counter + 1);
-            }
+            }*/
         }
 
         return $result;
