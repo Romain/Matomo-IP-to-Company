@@ -25,12 +25,13 @@ class IPtoCompany extends \Piwik\Plugin
     {
         try {
             $sql = "CREATE TABLE " . Common::prefixTable('ip_to_company') . " (
+                        id INTEGER NOT NULL AUTO_INCREMENT,
                         ip VARCHAR( 15 ) NOT NULL ,
                         as_number VARCHAR( 10 ) NULL ,
                         as_name VARCHAR( 200 ) NULL ,
-                        created_at DATETIME NOT NULL ,
-                        updated_at DATETIME NOT NULL ,
-                        PRIMARY KEY ( ip )
+                        created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+                        updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
+                        PRIMARY KEY ( id )
                     )  DEFAULT CHARSET=utf8 ";
             Db::exec($sql);
         } catch (Exception $e) {
