@@ -1,5 +1,17 @@
 ## Changelog
 
+### 0.2.2
+
+*[2020-01-06]*
+
+- Update the plugin number in the JSON
+
+### 0.2.1
+
+*[2020-01-06]*
+
+- Create the table during installation and not activation.
+
 ### 0.2.0
 
 *[2020-01-06]*
