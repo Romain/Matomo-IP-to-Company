@@ -81,7 +81,7 @@ class GetCompanies extends Base
         }
 
         $view->config->show_search = true;
-        $view->requestConfig->filter_sort_column = 'nb_visits';
+        // $view->requestConfig->filter_sort_column = 'nb_visits';
         // $view->requestConfig->filter_limit = 10';
 
         $view->config->addTranslation('company', Piwik::translate('IPtoCompany_Company'));
