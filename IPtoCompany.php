@@ -8,13 +8,47 @@
 
 namespace Piwik\Plugins\IPtoCompany;
 
+use Piwik\Db;
 use Piwik\Piwik;
+use Piwik\Common;
 use Piwik\Plugin;
 use Piwik\SettingsPiwik;
 use Piwik\Widget\WidgetsList;
+use \Exception;
 
 class IPtoCompany extends \Piwik\Plugin
 {
+    /**
+     * @see https://developer.matomo.org/guides/extending-database
+     */
+    public function activate()
+    {
+        try {
+            $sql = "CREATE TABLE " . Common::prefixTable('ip_to_company') . " (
+                        ip VARCHAR( 15 ) NOT NULL ,
+                        as_number VARCHAR( 10 ) NULL ,
+                        as_name VARCHAR( 200 ) NULL ,
+                        created_at DATETIME NOT NULL ,
+                        updated_at DATETIME NOT NULL ,
+                        PRIMARY KEY ( ip )
+                    )  DEFAULT CHARSET=utf8 ";
+            Db::exec($sql);
+        } catch (Exception $e) {
+            // ignore error if table already exists (1050 code is for 'table already exists')
+            if (!Db::get()->isErrNo($e, '1050')) {
+                throw $e;
+            }
+        }
+    }
+
+    /**
+     * @see https://developer.matomo.org/guides/extending-database
+     */
+    public function deactivate()
+    {
+        Db::dropTables(Common::prefixTable('ip_to_company'));
+    }
+
     /**
      * @see \Piwik\Plugin::registerEvents
      */
