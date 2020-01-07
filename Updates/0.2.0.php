@@ -50,7 +50,7 @@ class Updates_0_2_0 extends PiwikUpdates
             'as_name' => 'VARCHAR( 200 ) NULL',
             'created_at' => 'DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP',
             'updated_at' => 'DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP',
-        ], 'ip');
+        ], 'id');
         // you can also define custom SQL migrations. If you need to bind parameters, use `->boundSql()`
         // $migration2 = $this->migration->db->sql($sqlQuery = 'SELECT 1');
 

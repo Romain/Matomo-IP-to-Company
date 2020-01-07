@@ -1,7 +1,7 @@
 {
     "name": "IPtoCompany",
     "description": "Get the name of the companies that visit your website.",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "theme": false,
     "require": {
         "piwik": ">=3.10.0,<4.0.0-b1"
