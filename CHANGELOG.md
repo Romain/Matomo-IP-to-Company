@@ -1,5 +1,17 @@
 ## Changelog
 
+### 0.2.4
+
+*[2020-01-07]*
+
+- Fixed a bug in the primary key definition in the migration
+
+### 0.2.3
+
+*[2020-01-06]*
+
+- Update the plugin number in the JSON
+
 ### 0.2.2
 
 *[2020-01-06]*
