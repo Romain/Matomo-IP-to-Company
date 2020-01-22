@@ -43,7 +43,7 @@ class IPInfo
      * Get formatted details for an IP address.
      * @param  string|null $ip_address IP address to look up.
      * @return string Formatted IPinfo data as a JSON string.
-     * @throws Exception
+     * @throws \Exception
      */
     public function getDetails($ip_address = null)
     {
@@ -78,7 +78,7 @@ class IPInfo
      * Get details for a specific IP address.
      * @param  string $ip_address IP address to query API for.
      * @return array IP response data.
-     * @throws Exception
+     * @throws \Exception
      */
     private function getRequestDetails(string $ip_address)
     {
@@ -107,14 +107,14 @@ class IPInfo
             curl_close($ch);
 
             $response = json_decode($result, TRUE);
-        } catch (Exception $e) {
-            throw new Exception($e->getMessage());
+        } catch (\Exception $e) {
+            throw new \Exception($e->getMessage());
         }
 
         if ($httpCode == self::STATUS_CODE_QUOTA_EXCEEDED) {
-            throw new Exception('IPinfo request quota exceeded.');
+            throw new \Exception('IPinfo request quota exceeded.');
         } elseif ($httpCode >= 400) {
-            throw new Exception('Exception: ' . json_encode([
+            throw new \Exception('Exception: ' . json_encode([
                 'status' => $httpCode
             ]));
         }
