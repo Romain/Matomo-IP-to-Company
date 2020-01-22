@@ -15,6 +15,7 @@ use Piwik\DataTable\Row;
 use Piwik\Piwik;
 use Piwik\API\Request;
 use Piwik\Plugins\IPtoCompany\Libraries\IPInfo;
+use Piwik\Container\StaticContainer;
 use \Exception;
 
 /**
@@ -35,12 +36,20 @@ class API extends \Piwik\Plugin\API
      */
     public function getCompanies($idSite, $period, $date, $segment = false)
     {
+        Piwik::checkUserHasViewAccess($idSite);
+
+        $logger = StaticContainer::getContainer()->get('Psr\Log\LoggerInterface');
+
         $response = Request::processRequest('Live.getLastVisitsDetails', [
-            'idSite'        => $idSite,
-            'period'        => $period,
-            'date'          => $date,
+            'idSite'            => $idSite,
+            'period'            => $period,
+            'date'              => $date,
+            'segment'           => $segment,
+            'flat'              => FALSE,
+            'doNotFetchActions' => FALSE
             // 'token_auth'    => $_ENV['AUTH_TOKEN']
         ]);
+        $response->applyQueuedFilters();
 
         $result = $response->getEmptyClone($keepFilters = false);
 
@@ -60,11 +69,11 @@ class API extends \Piwik\Plugin\API
             $ipList = $this->getIPDetails($visitIp, $ipList, $dbList);
             $companyName = $ipList[$visitIp];
 
-            // if there is no row for this browser, create it
+            // if there is no row for this IP, create it
             if ($ipRow === false) {
                 $result->addRowFromSimpleArray(array(
                     'IP'     => $visitIp,
-                    'company'   => $companyName,
+                    'company'   => stripslashes($companyName),
                     'last_visit_time'   => $visitRow->getColumn('lastActionDateTime'),
                     'type'   => $visitRow->getColumn('visitorType'),
                     'nb_visits'   => $visitRow->getColumn('visitCount'),
@@ -213,8 +222,9 @@ class API extends \Piwik\Plugin\API
         $date = new \Datetime();
 
         try {
+            $asName = filter_var($data['as_name'], FILTER_SANITIZE_MAGIC_QUOTES);
             $sql = "UPDATE " . Common::prefixTable('ip_to_company') . "
-                SET as_number = '{$data['as_number']}', as_name = '{$data['as_name']}'
+                SET as_number = '{$data['as_number']}', as_name = '{$asName}'
                 WHERE id = {$item['id']}";
             Db::exec($sql);
         } catch (Exception $e) {
@@ -232,9 +242,10 @@ class API extends \Piwik\Plugin\API
     private function insertCompanyDetails($data)
     {
         try {
+            $asName = filter_var($data['as_name'], FILTER_SANITIZE_MAGIC_QUOTES);
             $sql = "INSERT INTO " . Common::prefixTable('ip_to_company') . "
                 (ip, as_number, as_name) VALUES
-                ('{$data['ip']}', '{$data['as_number']}', '{$data['as_name']}')";
+                ('{$data['ip']}', '{$data['as_number']}', '{$asName}')";
             Db::exec($sql);
         } catch (Exception $e) {
             throw $e;
