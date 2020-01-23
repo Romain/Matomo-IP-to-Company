@@ -1,5 +1,19 @@
 ## Changelog
 
+### 0.2.6
+
+*[2020-01-07]*
+
+- Commit the Changelog and the plugin.json with the tag
+
+### 0.2.5
+
+*[2020-01-07]*
+
+- Fixed the bug introduced by Matomo 1.13.1 when we gathered the visits using Live plugin API
+- Fixed the way we passed the data to the view (it was generating warnings)
+- Fixed the way we called the Exception class
+
 ### 0.2.4
 
 *[2020-01-07]*
