@@ -132,18 +132,18 @@ class API extends \Piwik\Plugin\API
         $hostname       = gethostbyaddr($ip);
 
         if(!isset($ipList[$ip])) {
-            $oneWeekAgo = new \Datetime();
-            $oneWeekAgo->sub(new \DateInterval('P1W'));
+            $delay = new \Datetime();
+            $delay->sub(new \DateInterval('P2W'));
 
             // Check if the IP address exists in the DB and if the record is younger than 1 week
             foreach ($dbList as $item) {
                 $itemDate = new \Datetime($item['updated_at']);
 
-                if(($item['ip'] == $ip) && ($oneWeekAgo <= $itemDate)) {
+                if(($item['ip'] == $ip) && ($delay <= $itemDate)) {
                     $ipList[$ip]    = $item['as_name'];
                     $itemFound      = TRUE;
                 }
-                elseif(($item['ip'] == $ip) && ($itemDate < $oneWeekAgo)) {
+                elseif(($item['ip'] == $ip) && ($itemDate < $delay)) {
                     $companyDetails = $this->getCompanyDetails($ip);
                     $companyName    = $companyDetails['as_name'];
                     $itemFound      = TRUE;

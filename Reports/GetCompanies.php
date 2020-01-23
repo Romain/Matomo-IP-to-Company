@@ -37,6 +37,10 @@ class GetCompanies extends Base
 
         // By default standard metrics are defined but you can customize them by defining an array of metric names
         $this->metrics = [
+            'nb_visits'
+        ];
+
+        $this->columns = [
             'IP',
             'company',
             'last_visit_time',
@@ -95,7 +99,7 @@ class GetCompanies extends Base
         $view->config->addTranslation('country', Piwik::translate('IPtoCompany_Country'));
         $view->config->addTranslation('city', Piwik::translate('IPtoCompany_City'));
 
-        $view->config->columns_to_display = array_merge($this->metrics);
+        $view->config->columns_to_display = $this->columns;
     }
 
     /**
