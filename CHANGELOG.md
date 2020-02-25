@@ -1,5 +1,17 @@
 ## Changelog
 
+### 0.2.8
+
+*[2020-02-25]*
+
+- Commit the Changelog and the plugin.json with the tag
+
+### 0.2.7
+
+*[2020-02-25]*
+
+- Conditionally apply FILTER_SANITIZE_MAGIC_QUOTES or FILTER_SANITIZE_ADD_SLASHES filters based on PHP version
+
 ### 0.2.6
 
 *[2020-01-07]*
