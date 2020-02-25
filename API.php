@@ -135,7 +135,7 @@ class API extends \Piwik\Plugin\API
             $delay = new \Datetime();
             $delay->sub(new \DateInterval('P2W'));
 
-            // Check if the IP address exists in the DB and if the record is younger than 1 week
+            // Check if the IP address exists in the DB and if the record is younger than 2 week
             foreach ($dbList as $item) {
                 $itemDate = new \Datetime($item['updated_at']);
 
@@ -222,7 +222,14 @@ class API extends \Piwik\Plugin\API
         $date = new \Datetime();
 
         try {
-            $asName = filter_var($data['as_name'], FILTER_SANITIZE_MAGIC_QUOTES);
+            // If the server is running PHP 7.4.0 or newer
+            if($this->isPHPVersionMoreRecentThan("7.4.0")) {
+                $asName = filter_var($data['as_name'], FILTER_SANITIZE_ADD_SLASHES);
+            }
+            else {
+                $asName = filter_var($data['as_name'], FILTER_SANITIZE_MAGIC_QUOTES);
+            }
+
             $sql = "UPDATE " . Common::prefixTable('ip_to_company') . "
                 SET as_number = '{$data['as_number']}', as_name = '{$asName}'
                 WHERE id = {$item['id']}";
@@ -249,6 +256,30 @@ class API extends \Piwik\Plugin\API
             Db::exec($sql);
         } catch (Exception $e) {
             throw $e;
+        }
+
+        return TRUE;
+    }
+
+    /**
+     * A private methode to save the company details in the DB
+     * @param array    $data
+     * @return boolean
+     */
+    private function isPHPVersionMoreRecentThan($version)
+    {
+        $phpVersion         = phpversion();
+        $phpVersionParts    = explode(".", $phpVersion);
+        $phpMinVersionParts = explode(".", $version);
+
+        if($phpVersionParts[0] < $phpMinVersionParts[0]) {
+            return FALSE;
+        }
+        elseif($phpVersionParts[1] < $phpMinVersionParts[1]) {
+            return FALSE;
+        }
+        elseif($phpVersionParts[2] < $phpMinVersionParts[2]) {
+            return FALSE;
         }
 
         return TRUE;
