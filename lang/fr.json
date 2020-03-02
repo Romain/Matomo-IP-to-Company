@@ -12,6 +12,9 @@
         "City": "Ville",
         "NumberOfVisits": "Nombre de visites",
         "YourIPInfoAccessToken": "Votre jeton d'accès fourni par IPinfo.io",
-        "PasteYourAccessToken": "Collez dans le champ ci-contre votre code d'accès."
+        "PasteYourAccessToken": "Collez dans le champ ci-contre votre code d'accès.",
+        "SubscribeToEmailReport": "Abonnez-vous aux rapports",
+        "WantToReceiveDailyReport": "Je veux recevoir des rapports quotidiens par email avec la liste des sociétés qui ont visité mes sites web.",
+        "CompaniesReportSubject": "[%1$s] Votre rapport quotidien / Sociétés
     }
 }

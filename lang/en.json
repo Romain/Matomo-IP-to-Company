@@ -12,6 +12,9 @@
         "City": "City",
         "NumberOfVisits": "Number of visits",
         "YourIPInfoAccessToken": "Your IPinfo.io access token",
-        "PasteYourAccessToken": "Paste in the field below your access token."
+        "PasteYourAccessToken": "Paste in the field below your access token.",
+        "SubscribeToEmailReport": "Subscribe to the email reports",
+        "WantToReceiveDailyReport": "I want to receive the daily reports by email with the name of the company that visited my websites.",
+        "CompaniesReportSubject": "[%1$s] Your daily report / Companies"
     }
 }

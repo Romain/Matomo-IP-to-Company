@@ -12,6 +12,9 @@
         "City": "Ciudad",
         "NumberOfVisits": "Número de visitas",
         "YourIPInfoAccessToken": "Su ficha de acceso de IPinfo.io",
-        "PasteYourAccessToken": "Pega al lado su ficha de acceso."
+        "PasteYourAccessToken": "Pega al lado su ficha de acceso.",
+        "SubscribeToEmailReport": "Suscribete a los informes",
+        "WantToReceiveDailyReport": "Quiero recibir los informes cotidianos por email con la lista de empresas que visitaron mis sitios web.",
+        "CompaniesReportSubject": "[%1$s] Su informe cotidiano / Empresas
     }
 }
