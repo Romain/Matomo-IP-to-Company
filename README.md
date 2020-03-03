@@ -45,4 +45,4 @@ Yes! As of version 0.3.0, you can receive this report by email. You just have to
 
 This report will then be sent to you once a day, for each site that you have access to, with the list of companies that visited your website the day before.
 
-![Image of Yaktocat](https://github.com/Romain/Matomo-IP-to-Company/tree/master/screenshots/user-setting-subscribe-to-email-report.png)
+![How to activate the email report](https://github.com/Romain/Matomo-IP-to-Company/blob/master/screenshots/user-setting-subscribe-to-email-report.png)
