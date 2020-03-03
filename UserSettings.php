@@ -12,6 +12,9 @@ use Piwik\Piwik;
 use Piwik\Settings\Setting;
 use Piwik\Settings\FieldConfig;
 use Piwik\Validators\NotEmpty;
+use Piwik\Common;
+use Piwik\Db;
+use Piwik\Container\StaticContainer;
 
 /**
  * Defines Settings for IPtoCompany.
@@ -23,13 +26,10 @@ use Piwik\Validators\NotEmpty;
  */
 class UserSettings extends \Piwik\Settings\Plugin\UserSettings
 {
-    /** @var Setting */
-    public $subscribedToEmailReport;
-
     protected function init()
     {
         // User setting --> checkbox converted to bool
-        $this->autoRefresh = $this->createSubscribedToEmailReportSetting();
+        $this->subscribedToEmailReport = $this->createSubscribedToEmailReportSetting();
     }
 
     private function createSubscribedToEmailReportSetting()
@@ -40,5 +40,27 @@ class UserSettings extends \Piwik\Settings\Plugin\UserSettings
             $field->description = Piwik::translate('IPtoCompany_WantToReceiveDailyReport');
             // $field->validators[] = new NotEmpty();
         });
+    }
+
+    public function getSubscribedToEmailReportValueForUser($userLogin)
+    {
+        // Sanitize the user login
+        $userLogin = filter_var($userLogin, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+
+        try {
+            $sql = "SELECT * FROM " . Common::prefixTable('plugin_setting') . "
+                    WHERE plugin_name = 'IPtoCompany'
+                    AND setting_name = 'subscribedToEmailReport'
+                    AND setting_value = '1'
+                    AND user_login = '" . $userLogin . "'";
+            $result = Db::fetchAll($sql);
+        } catch (Exception $e) {
+            // ignore error if table already exists (1050 code is for 'table already exists')
+            if (!Db::get()->isErrNo($e, '1050')) {
+                throw $e;
+            }
+        }
+
+        return count($result) == 1;
     }
 }
