@@ -1,10 +1,10 @@
 {
     "name": "IPtoCompany",
     "description": "Get the name of the companies that visit your website.",
-    "version": "0.2.8",
+    "version": "0.3.0",
     "theme": false,
     "require": {
-        "piwik": ">=3.10.0,<4.0.0-b1"
+        "piwik": ">=3.13.3-stable,<4.0.0-b1"
     },
     "authors": [
         {

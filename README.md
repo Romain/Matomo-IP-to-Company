@@ -1,5 +1,8 @@
 # Matomo IPtoCompany Plugin
 
+> New in version 0.3.0
+> - Daily email report containing the list of companies that visited your website
+
 ## Description
 
 This plugin is meant to be installed on Matomo. It provides you with the name of the company which holds the IP that visited your website.
@@ -35,3 +38,11 @@ Most of the big companies have their own proxy set up with a real name configure
 Therefore, this information is not 100% reliable but this is still an interesting information to check from time to time.
 
 If you have an access token set up for [IPInfo.io](https://ipinfo.io/), this plugin will use this data in the first place, before falling back to `gethostbyaddr`;
+
+## Can I receive this report by email?
+
+Yes! As of version 0.3.0, you can receive this report by email. You just have to go to Settings > Personal Settings and check the checkbox located in the IPtoCompany section which asks you if you want to subscribe to this report.
+
+This report will then be sent to you once a day, for each site that you have access to, with the list of companies that visited your website the day before.
+
+![Image of Yaktocat](https://github.com/Romain/Matomo-IP-to-Company/tree/master/screenshots/user-setting-subscribe-to-email-report.png)
