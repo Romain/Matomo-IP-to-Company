@@ -1,5 +1,11 @@
 ## Changelog
 
+### 0.3.0
+
+*[2020-03-02]*
+
+- Sends an email on a daily basis with the list of companies that visited the website the day before.
+
 ### 0.2.8
 
 *[2020-02-25]*
