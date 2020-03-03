@@ -41,3 +41,5 @@ If you have an access token set up for [IPInfo.io](https://ipinfo.io/), this plu
 Yes! As of version 0.3.0, you can receive this report by email. You just have to go to Settings > Personal Settings and check the checkbox located in the IPtoCompany section which asks you if you want to subscribe to this report.
 
 This report will then be sent to you once a day, for each site that you have access to, with the list of companies that visited your website the day before.
+
+![Image of Yaktocat](https://github.com/Romain/Matomo-IP-to-Company/tree/master/screenshots/user-setting-subscribe-to-email-report.png)
