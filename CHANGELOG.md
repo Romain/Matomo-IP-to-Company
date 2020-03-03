@@ -2,7 +2,7 @@
 
 ### 0.3.0
 
-*[2020-03-02]*
+*[2020-03-03]*
 
 - Sends an email on a daily basis with the list of companies that visited the website the day before.
 

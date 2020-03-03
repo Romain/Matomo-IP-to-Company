@@ -50,15 +50,15 @@ class Tasks extends \Piwik\Plugin\Tasks
             $mail = new \Piwik\Mail();
             $mail->setFrom($superUsers[0]);
             $mail->setReplyTo($superUsers[0]);
-            $logger->info("Email sent from ".$superUsers[0]." for ".$siteName);
+            $logger->info("IPtoCompany: Email sent from ".$superUsers[0]." for ".$siteName);
 
             foreach ($recipients as $recipient) {
                 $mail->addTo($recipient);
-                $logger->info("Email sent to ".$recipient." for ".$siteName);
+                $logger->info("IPtoCompany: Email sent to ".$recipient." for ".$siteName);
             }
             foreach ($superUsers as $recipient) {
                 $mail->addTo($recipient);
-                $logger->info("Email sent to ".$recipient." for ".$siteName);
+                $logger->info("IPtoCompany: Email sent to ".$recipient." for ".$siteName);
             }
 
             $mail->setSubject( Piwik::translate('IPtoCompany_CompaniesReportSubject', $siteName) );
@@ -66,7 +66,7 @@ class Tasks extends \Piwik\Plugin\Tasks
             try {
                 $mail->setWrappedHtmlBody($html);
             } catch (Exception $e) {
-                $logger->error("An error occured while sending the email: ".$e->message());
+                $logger->error("IPtoCompany: An error occured while sending the email: ".$e->message());
                 throw $e;
             }
 
@@ -197,7 +197,8 @@ class Tasks extends \Piwik\Plugin\Tasks
             $html .= "<p style='text-align: center; margin-top: 40px; margin-bottom: 40px; font-weight: bold;'><em>" . Piwik::translate('IPtoCompany_NoOneVisitedWebsiteYesterday') . "</em></p>";
         }
 
-        $html .= "<p>" . Piwik::translate('IPtoCompany_HaveANiceDay') . "</p>";
+        $html .= "<br />"
+            ."<p>" . Piwik::translate('IPtoCompany_HaveANiceDay') . "</p>";
 
         return $html;
     }
