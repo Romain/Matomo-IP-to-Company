@@ -39,8 +39,8 @@ class Tasks extends \Piwik\Plugin\Tasks
         $companies  = \Piwik\API\Request::processRequest('IPtoCompany.getCompanies', [
             'idSite'    => $siteId,
             'period'    => 'day',
-            'date'      => '2019-12-17'
-            // 'date'      => 'yesterday'
+            // 'date'      => '2019-12-17'
+            'date'      => 'yesterday'
         ]);
 
         // Generate the HTML
