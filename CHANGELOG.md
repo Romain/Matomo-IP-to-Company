@@ -1,5 +1,11 @@
 ## Changelog
 
+### 0.3.2
+
+*[2020-03-04]*
+
+- Increased the plugin version for the publication to work on the marketplace
+
 ### 0.3.1
 
 *[2020-03-04]*
