@@ -1,5 +1,11 @@
 ## Changelog
 
+### 0.3.1
+
+*[2020-03-04]*
+
+- Use the date of yesterday for the email report
+
 ### 0.3.0
 
 *[2020-03-03]*
