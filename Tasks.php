@@ -46,17 +46,13 @@ class Tasks extends \Piwik\Plugin\Tasks
         // Generate the HTML
         $html = $this->convertCompaniesDataTableToHTML($companies);
 
-        if(!empty($superUsers)) {
+        if(!empty($superUsers) && !empty($recipients)) {
             $mail = new \Piwik\Mail();
             $mail->setFrom($superUsers[0]);
             $mail->setReplyTo($superUsers[0]);
             $logger->info("IPtoCompany: Email sent from ".$superUsers[0]." for ".$siteName);
 
             foreach ($recipients as $recipient) {
-                $mail->addTo($recipient);
-                $logger->info("IPtoCompany: Email sent to ".$recipient." for ".$siteName);
-            }
-            foreach ($superUsers as $recipient) {
                 $mail->addTo($recipient);
                 $logger->info("IPtoCompany: Email sent to ".$recipient." for ".$siteName);
             }
@@ -86,14 +82,28 @@ class Tasks extends \Piwik\Plugin\Tasks
      */
     private function getAllUsersEmailsForSite($siteId)
     {
+        $result     = [];
+        $userSettings = new \Piwik\Plugins\IPtoCompany\UserSettings();
+
         // Get the users with a view access
         $response = Request::processRequest('UsersManager.getUsersWithSiteAccess', [
             'idSite' => $siteId,
             'access' => 'view'
         ]);
-        $result     = [];
 
-        $userSettings = new \Piwik\Plugins\IPtoCompany\UserSettings();
+        foreach ($response as $user) {
+            $subscribedToEmailReport = $userSettings->getSubscribedToEmailReportValueForUser($user['login']);
+
+            if($subscribedToEmailReport) {
+                $result[] = $user['email'];
+            }
+        }
+
+        // Get the users with a write access
+        $response = Request::processRequest('UsersManager.getUsersWithSiteAccess', [
+            'idSite' => $siteId,
+            'access' => 'write'
+        ]);
 
         foreach ($response as $user) {
             $subscribedToEmailReport = $userSettings->getSubscribedToEmailReportValueForUser($user['login']);
@@ -114,6 +124,17 @@ class Tasks extends \Piwik\Plugin\Tasks
 
             if($subscribedToEmailReport) {
                 $result[] = $user['email'];
+            }
+        }
+
+        // Get the users with superuser access
+        $response   = Request::processRequest('UsersManager.getUsersHavingSuperUserAccess', []);
+
+        foreach ($response as $superUser) {
+            $subscribedToEmailReport = $userSettings->getSubscribedToEmailReportValueForUser($superUser['login']);
+
+            if($subscribedToEmailReport) {
+                $result[] = $superUser['email'];
             }
         }
 
