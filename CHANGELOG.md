@@ -1,8 +1,14 @@
 ## Changelog
 
+### 0.3.4
+
+*[2020-03-06]*
+
+- Bumping the version.
+
 ### 0.3.3
 
-*[2020-03-04]*
+*[2020-03-06]*
 
 - The superusers should not received the report if no user (including them) have agreed to receive it.
 
