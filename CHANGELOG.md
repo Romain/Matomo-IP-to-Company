@@ -1,5 +1,11 @@
 ## Changelog
 
+### 0.3.3
+
+*[2020-03-04]*
+
+- The superusers should not received the report if no user (including them) have agreed to receive it.
+
 ### 0.3.2
 
 *[2020-03-04]*
