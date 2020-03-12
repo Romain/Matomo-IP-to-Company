@@ -19,6 +19,7 @@
         "NoOneVisitedWebsiteYesterday": "Lo sentimos mucho, pero nadie vino a visitar su sitio web ayer...",
         "Hi": "Hola,",
         "FindBelowCompaniesReport": "Pueden encontrar abajo el informe con la lista de empresas que visitaron su sitio web ayer.",
-        "HaveANiceDay": "Le deseamos un buen día!"
+        "HaveANiceDay": "Le deseamos un buen día!",
+        "LifeTimeOfCacheForResultsInWeeks": "Numero de semanas durante cuales los resultados proveídos tienen que estar guardados en la memoria caché."
     }
 }
