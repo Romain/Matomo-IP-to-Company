@@ -1,5 +1,11 @@
 ## Changelog
 
+### 0.4.0
+
+*[2020-03-12]*
+
+- Creation of a parameter to set the lifetime of the cache according to the preferences of the user.
+
 ### 0.3.5
 ### 0.3.4
 

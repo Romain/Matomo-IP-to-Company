@@ -25,6 +25,15 @@ use \Exception;
  */
 class API extends \Piwik\Plugin\API
 {
+    public $cacheLifeTimeForResults;
+
+    public function __construct($settings = [])
+    {
+        // Get the access token
+        $systemSettings = new \Piwik\Plugins\IPtoCompany\SystemSettings();
+        $cacheLifeTimeForResults = $systemSettings->cacheLifeTimeForResults->getValue();
+        $this->cacheLifeTimeForResults = $cacheLifeTimeForResults <= 0 ? 2 : $cacheLifeTimeForResults;
+    }
 
     /**
      * Returns a data table with the visits.
@@ -133,9 +142,9 @@ class API extends \Piwik\Plugin\API
 
         if(!isset($ipList[$ip])) {
             $delay = new \Datetime();
-            $delay->sub(new \DateInterval('P2W'));
+            $delay->sub(new \DateInterval('P' . $this->cacheLifeTimeForResults . 'W'));
 
-            // Check if the IP address exists in the DB and if the record is younger than 2 week
+            // Check if the IP address exists in the DB and if the record is younger than the defined cache
             foreach ($dbList as $item) {
                 $itemDate = new \Datetime($item['updated_at']);
 
@@ -219,8 +228,6 @@ class API extends \Piwik\Plugin\API
      */
     private function updateCompanyDetails($item, $data)
     {
-        $date = new \Datetime();
-
         try {
             // If the server is running PHP 7.4.0 or newer
             if($this->isPHPVersionMoreRecentThan("7.4.0")) {
@@ -249,7 +256,12 @@ class API extends \Piwik\Plugin\API
     private function insertCompanyDetails($data)
     {
         try {
-            $asName = filter_var($data['as_name'], FILTER_SANITIZE_MAGIC_QUOTES);
+            if($this->isPHPVersionMoreRecentThan("7.4.0")) {
+                $asName = filter_var($data['as_name'], FILTER_SANITIZE_ADD_SLASHES);
+            }
+            else {
+                $asName = filter_var($data['as_name'], FILTER_SANITIZE_MAGIC_QUOTES);
+            }
             $sql = "INSERT INTO " . Common::prefixTable('ip_to_company') . "
                 (ip, as_number, as_name) VALUES
                 ('{$data['ip']}', '{$data['as_number']}', '{$asName}')";
@@ -272,13 +284,13 @@ class API extends \Piwik\Plugin\API
         $phpVersionParts    = explode(".", $phpVersion);
         $phpMinVersionParts = explode(".", $version);
 
-        if($phpVersionParts[0] < $phpMinVersionParts[0]) {
+        if((int)$phpVersionParts[0] < (int)$phpMinVersionParts[0]) {
             return FALSE;
         }
-        elseif($phpVersionParts[1] < $phpMinVersionParts[1]) {
+        elseif((int)$phpVersionParts[1] < (int)$phpMinVersionParts[1]) {
             return FALSE;
         }
-        elseif($phpVersionParts[2] < $phpMinVersionParts[2]) {
+        elseif((int)$phpVersionParts[2] < (int)$phpMinVersionParts[2]) {
             return FALSE;
         }
 
