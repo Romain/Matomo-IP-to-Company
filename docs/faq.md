@@ -31,3 +31,7 @@ Yes! As of version 0.3.0, you can receive this report by email. You just have to
 This report will then be sent to you once a day, for each site that you have access to, with the list of companies that visited your website the day before.
 
 ![How to activate the email report](https://github.com/Romain/Matomo-IP-to-Company/blob/master/screenshots/user-setting-subscribe-to-email-report.png)
+
+__Can I define the lifetime of the cache?__
+
+As of version 0.4.0, yes, you can. In the general settings section, you can set the number of weeks during which the results should be kept in cache. By default, we keep them 2 weeks, and the minimum is 1 week.
