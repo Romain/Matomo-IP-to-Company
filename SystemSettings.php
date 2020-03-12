@@ -48,7 +48,7 @@ class SystemSettings extends \Piwik\Settings\Plugin\SystemSettings
 
     private function createCacheLifeTimeForResultsSetting()
     {
-        return $this->makeSetting('cacheLifeTimeForResults', $default = 0, FieldConfig::TYPE_INT, function (FieldConfig $field) {
+        return $this->makeSetting('cacheLifeTimeForResults', $default = 2, FieldConfig::TYPE_INT, function (FieldConfig $field) {
             $field->title = Piwik::translate('IPtoCompany_LifeTimeOfCacheForResultsInWeeks');
             $field->uiControl = FieldConfig::UI_CONTROL_TEXT;
             $field->description = Piwik::translate('IPtoCompany_PasteYourAccessToken');

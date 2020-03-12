@@ -32,7 +32,7 @@ class API extends \Piwik\Plugin\API
         // Get the access token
         $systemSettings = new \Piwik\Plugins\IPtoCompany\SystemSettings();
         $cacheLifeTimeForResults = $systemSettings->cacheLifeTimeForResults->getValue();
-        $this->cacheLifeTimeForResults = $cacheLifeTimeForResults == 0 ? 2 : $cacheLifeTimeForResults;
+        $this->cacheLifeTimeForResults = $cacheLifeTimeForResults <= 0 ? 2 : $cacheLifeTimeForResults;
     }
 
     /**
