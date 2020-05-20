@@ -1,5 +1,11 @@
 ## Changelog
 
+### 0.4.1
+
+*[2020-05-20]*
+
+- Fixed a bug that occured when we tried to get the company details based on an IP that is not a valid IP address.
+
 ### 0.4.0
 
 *[2020-03-12]*
