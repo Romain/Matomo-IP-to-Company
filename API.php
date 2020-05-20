@@ -187,7 +187,7 @@ class API extends \Piwik\Plugin\API
         }
 
         // If the IP is not valid, just return the empty hostname
-        else {
+        elseif(!filter_var($ip, FILTER_VALIDATE_IP)) {
             $ipList[$ip] = EMPTY_HOSTNAME;
         }
 
