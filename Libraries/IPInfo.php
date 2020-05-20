@@ -121,6 +121,8 @@ class IPInfo
 
         return $response;
     }
+
+    
     /**
      * Build headers for API request.
      * @return array Headers for API request.

@@ -18,6 +18,8 @@ use Piwik\Plugins\IPtoCompany\Libraries\IPInfo;
 use Piwik\Container\StaticContainer;
 use \Exception;
 
+const EMPTY_HOSTNAME = "-";
+
 /**
  * API for plugin IPtoCompany
  *
@@ -138,7 +140,7 @@ class API extends \Piwik\Plugin\API
     {
         $itemFound      = FALSE;
         $companyName    = NULL;
-        $hostname       = gethostbyaddr($ip);
+        $hostname       = filter_var($ip, FILTER_VALIDATE_IP) ? gethostbyaddr($ip) : EMPTY_HOSTNAME;
 
         if(!isset($ipList[$ip])) {
             $delay = new \Datetime();
@@ -156,7 +158,7 @@ class API extends \Piwik\Plugin\API
                     $companyDetails = $this->getCompanyDetails($ip);
                     $companyName    = $companyDetails['as_name'];
                     $itemFound      = TRUE;
-                    $ipList[$ip] = $companyName ? $companyName : ($hostname === $ip ? "-" : $hostname);
+                    $ipList[$ip] = $companyName ? $companyName : ($hostname === $ip ? EMPTY_HOSTNAME : $hostname);
 
                     if($ipList[$ip] != $hostname) {
                         $this->updateCompanyDetails($item, [
@@ -168,11 +170,12 @@ class API extends \Piwik\Plugin\API
             }
         }
 
-        if(!isset($ipList[$ip]) && !$itemFound) {
+        // If the IP doesn't exist in the DB, and if it is a valid IP, try to get the details
+        if(!isset($ipList[$ip]) && !$itemFound && filter_var($ip, FILTER_VALIDATE_IP)) {
             $companyDetails = $this->getCompanyDetails($ip);
             $companyName    = $companyDetails['as_name'];
             $itemFound      = TRUE;
-            $ipList[$ip] = $companyName ? $companyName : ($hostname === $ip ? "-" : $hostname);
+            $ipList[$ip]    = $companyName ? $companyName : ($hostname === $ip ? EMPTY_HOSTNAME : $hostname);
 
             if($ipList[$ip] != $hostname) {
                 $this->insertCompanyDetails([
@@ -181,6 +184,11 @@ class API extends \Piwik\Plugin\API
                     'as_name'   => $companyDetails['as_name']
                 ]);
             }
+        }
+
+        // If the IP is not valid, just return the empty hostname
+        else {
+            $ipList[$ip] = EMPTY_HOSTNAME;
         }
 
         return $ipList;
