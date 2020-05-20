@@ -1,5 +1,11 @@
 ## Changelog
 
+### 0.4.2
+
+*[2020-05-20]*
+
+- Slightly change the scenario to display a dash if the IP is not valid.
+
 ### 0.4.1
 
 *[2020-05-20]*
