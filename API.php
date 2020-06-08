@@ -157,10 +157,11 @@ class API extends \Piwik\Plugin\API
                 elseif(($item['ip'] == $ip) && ($itemDate < $delay)) {
                     $companyDetails = $this->getCompanyDetails($ip);
                     $companyName    = $companyDetails['as_name'];
-                    $itemFound      = TRUE;
-                    $ipList[$ip] = $companyName ? $companyName : ($hostname === $ip ? EMPTY_HOSTNAME : $hostname);
+                    $itemFound      = $companyName ? TRUE : FALSE;
+                    $ipList[$ip]    = $companyName ? $companyName : ($hostname === $ip ? EMPTY_HOSTNAME : $hostname);
 
-                    if($ipList[$ip] != $hostname) {
+                    // We update the DB only if we got results from the getCompanyDetails method.
+                    if(($ipList[$ip] != $hostname) && $companyName) {
                         $this->updateCompanyDetails($item, [
                             'as_number' => $companyDetails['as_number'],
                             'as_name'   => $companyDetails['as_name']
@@ -174,10 +175,11 @@ class API extends \Piwik\Plugin\API
         if(!isset($ipList[$ip]) && !$itemFound && filter_var($ip, FILTER_VALIDATE_IP)) {
             $companyDetails = $this->getCompanyDetails($ip);
             $companyName    = $companyDetails['as_name'];
-            $itemFound      = TRUE;
+            $itemFound      = $companyName ? TRUE : FALSE;
             $ipList[$ip]    = $companyName ? $companyName : ($hostname === $ip ? EMPTY_HOSTNAME : $hostname);
 
-            if($ipList[$ip] != $hostname) {
+            // We insert the item in the DB only if we got results from the getCompanyDetails method.
+            if(($ipList[$ip] != $hostname) && $companyName) {
                 $this->insertCompanyDetails([
                     'ip'        => $ip,
                     'as_number' => $companyDetails['as_number'],
@@ -203,6 +205,15 @@ class API extends \Piwik\Plugin\API
     private function getCompanyDetails($ip)
     {
         $ipInfo         = new IPInfo();
+
+        // If no token has been set, stop here.
+        if(!$ipInfo->accessToken) {
+            return [
+                "as_name"   => NULL,
+                "as_number" => NULL
+            ];
+        }
+
         $details        = $ipInfo->getDetails($ip);
         $details        = json_decode($details);
         $companyName    = NULL;
