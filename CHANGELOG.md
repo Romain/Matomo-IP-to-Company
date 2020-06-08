@@ -1,5 +1,11 @@
 ## Changelog
 
+### 0.4.3
+
+*[2020-06-08]*
+
+- Fixed a bug that occures when the user removes the IPinfo token.
+
 ### 0.4.2
 
 *[2020-05-20]*
