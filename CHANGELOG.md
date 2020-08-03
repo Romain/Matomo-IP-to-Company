@@ -1,5 +1,11 @@
 ## Changelog
 
+### 0.4.4
+
+*[2020-06-08]*
+
+- Merged [PR 6](https://github.com/Romain/Matomo-IP-to-Company/pull/6): Swedish translation by [@ljo](https://github.com/ljo)
+
 ### 0.4.3
 
 *[2020-06-08]*
