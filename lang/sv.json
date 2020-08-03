@@ -1,0 +1,25 @@
+{
+    "IPtoCompany": {
+        "Companies": "Företag/domäner",
+        "Company": "Företag",
+        "LastVisit": "Senaste besök",
+        "Type": "Typ",
+        "LastVisitDuration": "Längd på senaste besök",
+        "ReferrerType": "Hänvisningstyp",
+        "ReferrerName": "Hänvisningsnamn",
+        "Device": "Enhet",
+        "Country": "Land",
+        "City": "Stad",
+        "NumberOfVisits": "Antal besök",
+        "YourIPInfoAccessToken": "Din IPinfo.io access-token",
+        "PasteYourAccessToken": "Fyll i din access-token i fältet nedan.",
+        "SubscribeToEmailReport": "Prenumerera på e-postrapporter",
+        "WantToReceiveDailyReport": "Jag vill få dagliga rapporter via e-post om företag/domäner som besökt sajterna.",
+        "CompaniesReportSubject": "[%1$s] Daglig rapport företag/domäner",
+        "NoOneVisitedWebsiteYesterday": "Inga besök på sajten igår ...",
+        "Hi": "Hej,",
+        "FindBelowCompaniesReport": "Företag/domäner-rapporten för igår.",
+        "HaveANiceDay": "Ha en bra dag",
+        "LifeTimeOfCacheForResultsInWeeks": "Antal veckor som resultaten sparas i cachen."
+    }
+}
