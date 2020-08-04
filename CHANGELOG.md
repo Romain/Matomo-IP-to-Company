@@ -1,8 +1,14 @@
 ## Changelog
 
+### 0.4.5
+
+*[2020-08-05]*
+
+- Merged [PR 7](https://github.com/Romain/Matomo-IP-to-Company/pull/7): German translation by [@Monschder](https://github.com/Romain/Matomo-IP-to-Company/commits?author=Monschder)
+
 ### 0.4.4
 
-*[2020-06-08]*
+*[2020-08-04]*
 
 - Merged [PR 6](https://github.com/Romain/Matomo-IP-to-Company/pull/6): Swedish translation by [@ljo](https://github.com/ljo)
 
