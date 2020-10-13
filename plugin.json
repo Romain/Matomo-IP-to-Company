@@ -4,7 +4,7 @@
     "version": "0.4.5",
     "theme": false,
     "require": {
-        "piwik": ">=3.13.3-stable,<4.0.0-b1"
+        "matomo": ">=4.0.0-b1,<5.0.0-b1"
     },
     "authors": [
         {
