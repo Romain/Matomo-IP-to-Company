@@ -28,8 +28,9 @@ const EMPTY_HOSTNAME = "-";
 class API extends \Piwik\Plugin\API
 {
     public $cacheLifeTimeForResults;
+    private $staticContainer;
 
-    public function __construct($settings = [])
+    public function __construct($settings = [], StaticContainer $staticContainer)
     {
         // Get the access token
         $systemSettings = new \Piwik\Plugins\IPtoCompany\SystemSettings();
@@ -49,7 +50,7 @@ class API extends \Piwik\Plugin\API
     {
         Piwik::checkUserHasViewAccess($idSite);
 
-        $logger = StaticContainer::getContainer()->get('Psr\Log\LoggerInterface');
+        $logger = $this->staticContainer->getContainer()->get('Psr\Log\LoggerInterface');
 
         $response = Request::processRequest('Live.getLastVisitsDetails', [
             'idSite'            => $idSite,
