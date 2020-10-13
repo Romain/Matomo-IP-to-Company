@@ -16,9 +16,11 @@ use Piwik\Container\StaticContainer;
 
 class Tasks extends \Piwik\Plugin\Tasks
 {
-    public function __construct($settings = [])
-    {
+    private $staticContainer;
 
+    public function __construct($settings = [], StaticContainer $staticContainer)
+    {
+        $this->staticContainer = $staticContainer;
     }
 
     public function schedule()
@@ -31,7 +33,7 @@ class Tasks extends \Piwik\Plugin\Tasks
 
     public function getListOfCompaniesThatVisitedWebsiteYesterday($siteId)
     {
-        $logger = StaticContainer::getContainer()->get('Psr\Log\LoggerInterface');
+        $logger     = $this->staticContainer->getContainer()->get('Psr\Log\LoggerInterface');
         $siteName   = Site::getNameFor($siteId);
         $recipients = $this->getAllUsersEmailsForSite($siteId);
         $superUsers = $this->getSuperUsersEmails();
