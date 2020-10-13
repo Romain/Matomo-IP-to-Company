@@ -30,12 +30,13 @@ class API extends \Piwik\Plugin\API
     public $cacheLifeTimeForResults;
     private $staticContainer;
 
-    public function __construct($settings = [], StaticContainer $staticContainer)
+    public function __construct(StaticContainer $staticContainer)
     {
         // Get the access token
         $systemSettings = new \Piwik\Plugins\IPtoCompany\SystemSettings();
         $cacheLifeTimeForResults = $systemSettings->cacheLifeTimeForResults->getValue();
         $this->cacheLifeTimeForResults = $cacheLifeTimeForResults <= 0 ? 2 : $cacheLifeTimeForResults;
+        $this->staticContainer = $staticContainer;
     }
 
     /**

@@ -20,7 +20,7 @@ class Tasks extends \Piwik\Plugin\Tasks
 
     public function __construct($settings = [], StaticContainer $staticContainer)
     {
-
+        $this->staticContainer = $staticContainer;
     }
 
     public function schedule()
