@@ -85,6 +85,12 @@ class GetCompanies extends Base
         }
 
         $view->config->show_search = true;
+        $view->config->show_pagination_control = true;
+        $view->config->show_limit_control = true;
+        $view->config->show_periods = true;
+        $view->config->show_bar_chart = false;
+        $view->config->show_pie_chart = false;
+        $view->config->show_tag_cloud = false;
         // $view->requestConfig->filter_sort_column = 'nb_visits';
         // $view->requestConfig->filter_limit = 10';
 
@@ -130,13 +136,13 @@ class GetCompanies extends Base
      * make it work. Usually you should NOT have to overwrite this render method.
      *
      * @return string
-    public function render()
-    {
-        $view = new View('@IPtoCompany/showCompanies');
-        $view->myData = array();
-
-        return $view->render();
-    }
+     * public function render()
+     * {
+     *     $view = new View('@IPtoCompany/showCompanies');
+     *     $view->myData = array();
+     *
+     *     return $view->render();
+     * }
     */
 
     /**
@@ -144,9 +150,9 @@ class GetCompanies extends Base
      * limit the audience by overwriting this method.
      *
      * @return bool
-    public function isEnabled()
-    {
-        return Piwik::hasUserSuperUserAccess()
-    }
+     * public function isEnabled()
+     * {
+     *     return Piwik::hasUserSuperUserAccess()
+     * }
      */
 }
