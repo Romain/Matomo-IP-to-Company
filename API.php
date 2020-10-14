@@ -48,7 +48,7 @@ class API extends \Piwik\Plugin\API
      * @param int $filterLimit
      * @return DataTable
      */
-    public function getCompanies($idSite, $period, $date, $segment = false, $filterLimit = 1000)
+    public function getCompanies($idSite, $period, $date, $segment = false, $filterLimit = 200)
     {
         Piwik::checkUserHasViewAccess($idSite);
 
