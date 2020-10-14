@@ -28,13 +28,15 @@ const EMPTY_HOSTNAME = "-";
 class API extends \Piwik\Plugin\API
 {
     public $cacheLifeTimeForResults;
+    private $staticContainer;
 
-    public function __construct($settings = [])
+    public function __construct(StaticContainer $staticContainer)
     {
         // Get the access token
         $systemSettings = new \Piwik\Plugins\IPtoCompany\SystemSettings();
         $cacheLifeTimeForResults = $systemSettings->cacheLifeTimeForResults->getValue();
         $this->cacheLifeTimeForResults = $cacheLifeTimeForResults <= 0 ? 2 : $cacheLifeTimeForResults;
+        $this->staticContainer = $staticContainer;
     }
 
     /**
@@ -43,21 +45,23 @@ class API extends \Piwik\Plugin\API
      * @param string $period
      * @param string $date
      * @param bool|string $segment
+     * @param int $filterLimit
      * @return DataTable
      */
-    public function getCompanies($idSite, $period, $date, $segment = false)
+    public function getCompanies($idSite, $period, $date, $segment = false, $filterLimit = 200)
     {
         Piwik::checkUserHasViewAccess($idSite);
 
-        $logger = StaticContainer::getContainer()->get('Psr\Log\LoggerInterface');
+        $logger = $this->staticContainer->getContainer()->get('Psr\Log\LoggerInterface');
 
         $response = Request::processRequest('Live.getLastVisitsDetails', [
-            'idSite'            => $idSite,
-            'period'            => $period,
-            'date'              => $date,
-            'segment'           => $segment,
-            'flat'              => FALSE,
-            'doNotFetchActions' => FALSE
+            'idSite'                => $idSite,
+            'period'                => $period,
+            'date'                  => $date,
+            'segment'               => $segment,
+            'flat'                  => FALSE,
+            'doNotFetchActions'     => FALSE,
+            'countVisitorsToFetch'  => $filterLimit
             // 'token_auth'    => $_ENV['AUTH_TOKEN']
         ]);
         $response->applyQueuedFilters();
