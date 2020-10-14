@@ -35,3 +35,7 @@ This report will then be sent to you once a day, for each site that you have acc
 __Can I define the lifetime of the cache?__
 
 As of version 0.4.0, yes, you can. In the general settings section, you can set the number of weeks during which the results should be kept in cache. By default, we keep them 2 weeks, and the minimum is 1 week.
+
+__How many records are returned?__
+
+By default, to guarantee the performance of the report, a maximum of 200 records are returned. You can increase this value by appending the following parameter to the URL: &filterLimit=300.
