@@ -1,5 +1,11 @@
 ## Changelog
 
+### 0.4.6
+
+*[2020-10-14]*
+
+- Activated the pagination
+
 ### 0.4.5
 
 *[2020-08-05]*
