@@ -1,8 +1,9 @@
 {
     "name": "IPtoCompany",
     "description": "Get the name of the companies that visit your website.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "theme": false,
+    "stylesheet": "stylesheets/iptocompany.less",
     "require": {
         "matomo": ">=4.0.0-b1,<5.0.0-b1"
     },

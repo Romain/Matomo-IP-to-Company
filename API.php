@@ -45,21 +45,23 @@ class API extends \Piwik\Plugin\API
      * @param string $period
      * @param string $date
      * @param bool|string $segment
+     * @param int $filterLimit
      * @return DataTable
      */
-    public function getCompanies($idSite, $period, $date, $segment = false)
+    public function getCompanies($idSite, $period, $date, $segment = false, $filterLimit = 200)
     {
         Piwik::checkUserHasViewAccess($idSite);
 
         $logger = $this->staticContainer->getContainer()->get('Psr\Log\LoggerInterface');
 
         $response = Request::processRequest('Live.getLastVisitsDetails', [
-            'idSite'            => $idSite,
-            'period'            => $period,
-            'date'              => $date,
-            'segment'           => $segment,
-            'flat'              => FALSE,
-            'doNotFetchActions' => FALSE
+            'idSite'                => $idSite,
+            'period'                => $period,
+            'date'                  => $date,
+            'segment'               => $segment,
+            'flat'                  => FALSE,
+            'doNotFetchActions'     => FALSE,
+            'countVisitorsToFetch'  => $filterLimit
             // 'token_auth'    => $_ENV['AUTH_TOKEN']
         ]);
         $response->applyQueuedFilters();
