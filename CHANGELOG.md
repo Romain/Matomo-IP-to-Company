@@ -1,5 +1,11 @@
 ## Changelog
 
+### 0.4.7
+
+*[2021-01-18]*
+
+- Catch some exceptions to avoid bugs if IPInfo encounters an error
+
 ### 0.4.6
 
 *[2020-10-14]*
