@@ -47,7 +47,12 @@ class IPInfo
      */
     public function getDetails($ip_address = null)
     {
-        $responseDetails = $this->getRequestDetails((string) $ip_address);
+        try {
+            $responseDetails = $this->getRequestDetails((string) $ip_address);
+        } catch (\Exception $e) {
+            throw new \Exception($e->getMessage());
+        }
+
         return $this->formatDetailsObject($responseDetails);
     }
 
@@ -122,7 +127,7 @@ class IPInfo
         return $response;
     }
 
-    
+
     /**
      * Build headers for API request.
      * @return array Headers for API request.
