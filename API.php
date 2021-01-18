@@ -218,7 +218,15 @@ class API extends \Piwik\Plugin\API
             ];
         }
 
-        $details        = $ipInfo->getDetails($ip);
+        try {
+            $details        = $ipInfo->getDetails($ip);
+        } catch (\Exception $e) {
+            return [
+                "as_name"   => NULL,
+                "as_number" => NULL
+            ];
+        }
+        
         $details        = json_decode($details);
         $companyName    = NULL;
         $asNumber       = NULL;
