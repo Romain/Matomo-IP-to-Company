@@ -18,7 +18,7 @@ class Tasks extends \Piwik\Plugin\Tasks
 {
     private $staticContainer;
 
-    public function __construct($settings = [], StaticContainer $staticContainer)
+    public function __construct(StaticContainer $staticContainer, $settings = [])
     {
         $this->staticContainer = $staticContainer;
     }
