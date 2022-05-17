@@ -1,0 +1,25 @@
+{
+    "IPtoCompany": {
+        "City": "城市",
+        "Companies": "公司",
+        "CompaniesReportSubject": "[%1$s] 你的每日報表 / 公司",
+        "Company": "公司",
+        "Country": "國家與地區",
+        "Device": "裝置",
+        "FindBelowCompaniesReport": "你可以在下方找到昨天的公司報表。",
+        "HaveANiceDay": "祝你有個愉快的一天！",
+        "Hi": "你好，",
+        "LastVisit": "上次訪問",
+        "LastVisitDuration": "上次訪問時長",
+        "LifeTimeOfCacheForResultsInWeeks": "返回結果的週數時段必須被緩存。",
+        "NoOneVisitedWebsiteYesterday": "抱歉，昨天沒有人訪問你的網站…",
+        "NumberOfVisits": "訪問次數",
+        "PasteYourAccessToken": "粘貼到存取權杖下方的欄位中。",
+        "ReferrerName": "引薦來源名稱",
+        "ReferrerType": "引薦來源類型",
+        "SubscribeToEmailReport": "訂閱 Email 報表",
+        "Type": "類型",
+        "WantToReceiveDailyReport": "我想透過 Email 接收包含訪問過我網站的公司名稱的每日報表。",
+        "YourIPInfoAccessToken": "你的 IPinfo.io 存取權杖"
+    }
+}

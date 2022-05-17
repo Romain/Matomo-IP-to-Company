@@ -1,0 +1,25 @@
+{
+    "IPtoCompany": {
+        "City": "By",
+        "Companies": "Bedrifter",
+        "CompaniesReportSubject": "[%1$s] Din daglige rapport/bedrifter",
+        "Company": "Bedrift",
+        "Country": "Land",
+        "Device": "Enhet",
+        "FindBelowCompaniesReport": "Nedenfor finner du bedriftsrapporten for gårsdagen.",
+        "HaveANiceDay": "Ha en fin dag.",
+        "Hi": "Hei,",
+        "LastVisit": "Siste besøk",
+        "LastVisitDuration": "Varighet for siste besøk",
+        "LifeTimeOfCacheForResultsInWeeks": "Antall uker der svarresultat må hurtiglagres.",
+        "NoOneVisitedWebsiteYesterday": "Ingen besøkte nettsiden din i dag …",
+        "NumberOfVisits": "Antall besøk",
+        "PasteYourAccessToken": "Lim inn tilgangssymbolet ditt i feltet nedenfor.",
+        "ReferrerName": "Henvisernavn",
+        "ReferrerType": "Henvisningstype",
+        "SubscribeToEmailReport": "Abonner på e-postrapportene",
+        "Type": "Type",
+        "WantToReceiveDailyReport": "Jeg ønsker daglig rapportering per e-post med navnene til bedriftene som har besøkt nettsidene mine.",
+        "YourIPInfoAccessToken": "Ditt IPinfo.io-tilgangssymbol"
+    }
+}
