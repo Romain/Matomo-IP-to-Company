@@ -1,0 +1,25 @@
+{
+    "IPtoCompany": {
+        "City": "Ciutat",
+        "Companies": "Empreses",
+        "CompaniesReportSubject": "[%1$s] El vostre informe diari / Empreses",
+        "Company": "Empresa",
+        "Country": "País",
+        "Device": "Dispositiu",
+        "FindBelowCompaniesReport": "A continuació trobareu l'Informe d'Empreses d'ahir.",
+        "HaveANiceDay": "Que tinguis un bon dia!",
+        "Hi": "Bones,",
+        "LastVisit": "Darrera visita",
+        "LastVisitDuration": "Durada de la darrera visita",
+        "LifeTimeOfCacheForResultsInWeeks": "Nombre de setmanes durant les quals els resultats retornats s'han d'emmagatzemar a la memòria cau.",
+        "NoOneVisitedWebsiteYesterday": "Ens sap greu, però ahir ningú va visitar el vostre lloc web…",
+        "NumberOfVisits": "Nombre de visites",
+        "PasteYourAccessToken": "Enganxeu el vostre testimoni d'accés al camp que hi ha a sota.",
+        "ReferrerName": "Nom del referent",
+        "ReferrerType": "Tipus de referent",
+        "SubscribeToEmailReport": "Subscriu-te als informes per correu electrònic",
+        "Type": "Tipus",
+        "WantToReceiveDailyReport": "Vull rebre els informes diaris per correu electrònic amb el nom de l'empresa que ha visitat els meus llocs web.",
+        "YourIPInfoAccessToken": "El vostre testimoni d'accés proporcionat per IPinfo.io"
+    }
+}
