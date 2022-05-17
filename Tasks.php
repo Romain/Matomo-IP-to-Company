@@ -18,7 +18,7 @@ class Tasks extends \Piwik\Plugin\Tasks
 {
     private $staticContainer;
 
-    public function __construct($settings = [], StaticContainer $staticContainer)
+    public function __construct(StaticContainer $staticContainer, $settings = [])
     {
         $this->staticContainer = $staticContainer;
     }
@@ -42,7 +42,8 @@ class Tasks extends \Piwik\Plugin\Tasks
             'idSite'    => $siteId,
             'period'    => 'day',
             // 'date'      => '2019-12-17'
-            'date'      => 'yesterday'
+            'date'      => 'yesterday',
+            'trigger'   => 'archivephp'
         ]);
 
         // Generate the HTML
