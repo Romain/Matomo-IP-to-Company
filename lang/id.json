@@ -1,0 +1,25 @@
+{
+    "IPtoCompany": {
+        "City": "Kota",
+        "Companies": "Perusahaan",
+        "CompaniesReportSubject": "[%1$s] Laporan harian Anda/Perusahaan",
+        "Company": "Perusahaan",
+        "Country": "Negara",
+        "Device": "Perangkat",
+        "FindBelowCompaniesReport": "Anda akan menemukan Laporan Perusahaan untuk hari kemarin di bawah ini.",
+        "HaveANiceDay": "Semoga hari Anda menyenangkan!",
+        "Hi": "Hai,",
+        "LastVisit": "Kunjungan terakhir",
+        "LastVisitDuration": "Durasi kunjungan terakhir",
+        "LifeTimeOfCacheForResultsInWeeks": "Jumlah minggu di mana hasil yang dikembalikan harus disimpan.",
+        "NoOneVisitedWebsiteYesterday": "Kami minta maaf, tidak ada yang mengunjungi situs web Anda kemarin…",
+        "NumberOfVisits": "Jumlah kunjungan",
+        "PasteYourAccessToken": "Tempel token akses Anda di kolom di bawah ini.",
+        "ReferrerName": "Nama perujuk",
+        "ReferrerType": "Tipe perujuk",
+        "SubscribeToEmailReport": "Berlangganan laporan surel",
+        "Type": "Tipe",
+        "WantToReceiveDailyReport": "Saya ingin menerima laporan harian melalui surel dengan nama perusahaan yang mengunjungi situs web saya.",
+        "YourIPInfoAccessToken": "Token akses IPinfo.io Anda"
+    }
+}
