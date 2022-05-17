@@ -1,5 +1,11 @@
 ## Changelog
 
+### 1.2.0
+
+*[2022-05-17]*
+
+- PR #17 fixing issue #11: Translations using Weblate. Thanks to @comradekingu, @lourdas, @filhocf, @kayazeren, @sgiehl, @css31, @Findus23, raf, Ministry of Electronic Governance - Bulgaria, Taufik Adi Wicaksono and HO Gin Wang    
+
 ### 1.1.0
 
 *[2022-05-17]*
