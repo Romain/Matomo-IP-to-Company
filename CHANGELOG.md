@@ -1,5 +1,11 @@
 ## Changelog
 
+### 1.1.0
+
+*[2022-05-17]*
+
+- PR #16 fixing issue #12: Improve performances of the schedule function by adding a $_GET parameter.
+
 ### 1.0.3
 
 *[2022-03-10]*
