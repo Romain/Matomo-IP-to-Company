@@ -1,1 +1,17 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Città",
+        "Companies": "Aziende",
+        "CompaniesReportSubject": "[%1$s] Il tuo rapporto quotidiano / Aziende",
+        "Company": "Azienda",
+        "Country": "Stato",
+        "Device": "Dispositivo",
+        "FindBelowCompaniesReport": "Di seguito trovate il Rapporto Aziende per la giornata di ieri.",
+        "HaveANiceDay": "Buona giornata!",
+        "Hi": "Ciao,",
+        "LastVisit": "Ultima visita",
+        "LastVisitDuration": "Durata ultima visita",
+        "LifeTimeOfCacheForResultsInWeeks": "Numero di settimane durante le quali i risultati restituiti devono essere memorizzati nella cache.",
+        "NoOneVisitedWebsiteYesterday": "Siamo spiacenti, ma nessuno ha visitato il tuo sito web ieri…"
+    }
+}
