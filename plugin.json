@@ -28,5 +28,8 @@
         "company",
         "report",
         "companies"
-    ]
+    ],
+    "donate": {
+        "paypal": "romain.biard@gmail.com"
+    }
 }
