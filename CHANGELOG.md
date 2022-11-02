@@ -1,5 +1,11 @@
 ## Changelog
 
+### 1.2.1
+
+*[2022-11-02]*
+
+- Added a donate section to the description of the plugin
+
 ### 1.2.0
 
 *[2022-05-17]*
