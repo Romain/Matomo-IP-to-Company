@@ -1,5 +1,11 @@
 ## Changelog
 
+### 1.2.2
+
+*[2022-11-02]*
+
+- Fixing an issue in plugin.json
+
 ### 1.2.1
 
 *[2022-11-02]*
