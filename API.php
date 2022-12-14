@@ -305,26 +305,12 @@ class API extends \Piwik\Plugin\API
     }
 
     /**
-     * A private methode to save the company details in the DB
-     * @param array    $data
+     * A private method to determine if installed PHP version is above a certain version threshold
+     * @param string $version
      * @return boolean
      */
     private function isPHPVersionMoreRecentThan($version)
     {
-        $phpVersion         = phpversion();
-        $phpVersionParts    = explode(".", $phpVersion);
-        $phpMinVersionParts = explode(".", $version);
-
-        if((int)$phpVersionParts[0] < (int)$phpMinVersionParts[0]) {
-            return FALSE;
-        }
-        elseif((int)$phpVersionParts[1] < (int)$phpMinVersionParts[1]) {
-            return FALSE;
-        }
-        elseif((int)$phpVersionParts[2] < (int)$phpMinVersionParts[2]) {
-            return FALSE;
-        }
-
-        return TRUE;
+        return version_compare(phpversion(), $version, '>');
     }
 }
