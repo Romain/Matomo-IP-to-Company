@@ -23,6 +23,8 @@ use Piwik\View;
  */
 class GetCompanies extends Base
 {
+    protected $columns;
+    
     protected function init()
     {
         parent::init();
