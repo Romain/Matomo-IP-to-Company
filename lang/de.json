@@ -12,14 +12,14 @@
         "LastVisit": "Letzter Besuch",
         "LastVisitDuration": "Dauer des letzten Besuchs",
         "LifeTimeOfCacheForResultsInWeeks": "Anzahl der Wochen, in denen die zurückgelieferten Ergebnisse zwischengespeichert werden müssen.",
-        "NoOneVisitedWebsiteYesterday": "Es tut uns leid, aber niemand hat gestern Ihre Website besucht…",
+        "NoOneVisitedWebsiteYesterday": "Es tut uns leid, aber niemand hat gestern Ihre Webseite besucht…",
         "NumberOfVisits": "Anzahl der Besuche",
         "PasteYourAccessToken": "Fügen Sie in das Feld unter Ihrem Zugangsschlüssel (Token) ein.",
         "ReferrerName": "Referrer Name",
         "ReferrerType": "Referrer Typ",
         "SubscribeToEmailReport": "Abonnieren Sie die E-Mail-Berichte",
         "Type": "Typ",
-        "WantToReceiveDailyReport": "Ich möchte tägliche Berichte per E-Mail mit dem Namen des Unternehmens erhalten, das meine Websites besucht hat.",
+        "WantToReceiveDailyReport": "Ich möchte tägliche Berichte per E-Mail mit dem Namen des Unternehmens erhalten, das meine Webseiten besucht hat.",
         "YourIPInfoAccessToken": "Ihr IPinfo.io Zugangsschlüssel (Token)"
     }
 }
