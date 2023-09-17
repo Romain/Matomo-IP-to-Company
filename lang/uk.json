@@ -1,1 +1,25 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Місто",
+        "Companies": "Компанії",
+        "CompaniesReportSubject": "[%1$s] Ваш щоденний звіт / Компанії",
+        "Company": "Компанія",
+        "Country": "Країна",
+        "Device": "Пристрій",
+        "FindBelowCompaniesReport": "Нижче ви знайдете звіт про компанії за вчорашній день.",
+        "HaveANiceDay": "Гарного вам дня!",
+        "Hi": "Привіт,",
+        "LastVisit": "Останнє відвідування",
+        "LastVisitDuration": "Тривалість останнього відвідування",
+        "LifeTimeOfCacheForResultsInWeeks": "Кількість тижнів, протягом яких повинні кешуватися повернуті результати.",
+        "NoOneVisitedWebsiteYesterday": "Вибачте, але вчора на ваш сайт ніхто не заходив…",
+        "NumberOfVisits": "Кількість відвідувань",
+        "PasteYourAccessToken": "Вставте у поле під токеном доступу.",
+        "ReferrerName": "Ім'я реферера",
+        "ReferrerType": "Тип реферера",
+        "SubscribeToEmailReport": "Підпишіться на звіти електронною поштою",
+        "Type": "Тип",
+        "WantToReceiveDailyReport": "Я хочу отримувати щоденні звіти електронною поштою з назвою компаній, яка відвідувала мої вебсайти.",
+        "YourIPInfoAccessToken": "Ваш токен доступу до IPinfo.io"
+    }
+}
