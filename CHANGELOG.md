@@ -2,6 +2,12 @@
 
 ### 1.2.2
 
+*[2023-09-29]*
+
+- Compatibility with Matomo 5
+
+### 1.2.2
+
 *[2022-11-02]*
 
 - Fixing an issue in plugin.json
