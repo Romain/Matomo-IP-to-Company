@@ -1,1 +1,25 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Stad",
+        "Companies": "Organisaties",
+        "CompaniesReportSubject": "[%1$s] Uw dagelijks rapport / Organisaties",
+        "Company": "Organisatie",
+        "Country": "Land",
+        "Device": "Apparaat",
+        "FindBelowCompaniesReport": "Hieronder vindt u het bedrijvenrapport van gisteren.",
+        "HaveANiceDay": "Fijne dag!",
+        "Hi": "Hallo,",
+        "LastVisit": "Laatste bezoek",
+        "LastVisitDuration": "Duur laatste bezoek",
+        "LifeTimeOfCacheForResultsInWeeks": "Aantal weken gedurende dewelke aangeboden resultaten in de cache moeten worden opgeslagen.",
+        "NoOneVisitedWebsiteYesterday": "Het spijt ons, maar gisteren heeft niemand uw website bezocht…",
+        "NumberOfVisits": "Aantal bezoeken",
+        "PasteYourAccessToken": "Plak in het veld hieronder uw toegangstoken.",
+        "ReferrerName": "Referrer naam",
+        "ReferrerType": "Referrer type",
+        "SubscribeToEmailReport": "Schrijf in op de e-mail rapporten",
+        "Type": "Type",
+        "WantToReceiveDailyReport": "Ik wil de dagelijkse rapporten per e-mail ontvangen met de naam van het bedrijf dat mijn websites heeft bezocht.",
+        "YourIPInfoAccessToken": "Uw IPinfo.io toegangstoken"
+    }
+}

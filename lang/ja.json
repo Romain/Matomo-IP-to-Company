@@ -1,1 +1,25 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "都市",
+        "Companies": "企業",
+        "CompaniesReportSubject": "[%1$s] デイリーレポート/ 企業",
+        "Company": "企業",
+        "Country": "国",
+        "Device": "デバイス",
+        "FindBelowCompaniesReport": "昨日の企業レポートの下に表示されます。",
+        "HaveANiceDay": "良い１日を！",
+        "Hi": "こんにちは",
+        "LastVisit": "最後のビジット",
+        "LastVisitDuration": "最終訪問時間",
+        "LifeTimeOfCacheForResultsInWeeks": "返された結果をキャッシュする必要がある週数。",
+        "NoOneVisitedWebsiteYesterday": "残念ですが、昨日あなたのウェブサイトに訪れた人はいませんでした…",
+        "NumberOfVisits": "ビジット回数",
+        "PasteYourAccessToken": "アクセス トークンの下のフィールドに貼り付けます。",
+        "ReferrerName": "リファラー名",
+        "ReferrerType": "リファラータイプ",
+        "SubscribeToEmailReport": "電子メール レポートを購読する",
+        "Type": "タイプ",
+        "WantToReceiveDailyReport": "Web サイトにアクセスした企業の名前が記載されたレポートを電子メールで受け取りたい。",
+        "YourIPInfoAccessToken": "IPinfo.io アクセス トークン"
+    }
+}
