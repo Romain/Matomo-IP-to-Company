@@ -45,7 +45,7 @@ class UserSettings extends \Piwik\Settings\Plugin\UserSettings
     public function getSubscribedToEmailReportValueForUser($userLogin)
     {
         // Sanitize the user login
-        $userLogin = filter_var($userLogin, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+        $userLogin = htmlspecialchars($userLogin);
 
         try {
             $sql = "SELECT * FROM " . Common::prefixTable('plugin_setting') . "
