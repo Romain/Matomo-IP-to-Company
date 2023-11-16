@@ -33,7 +33,7 @@ class Tasks extends \Piwik\Plugin\Tasks
 
     public function getListOfCompaniesThatVisitedWebsiteYesterday($siteId)
     {
-        $logger     = $this->staticContainer->getContainer()->get('Psr\Log\LoggerInterface');
+        $logger     = $this->staticContainer->getContainer()->get(\Piwik\Log\LoggerInterface::class);
         $siteName   = Site::getNameFor($siteId);
         $recipients = $this->getAllUsersEmailsForSite($siteId);
         $superUsers = $this->getSuperUsersEmails();

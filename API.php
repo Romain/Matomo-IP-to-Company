@@ -11,7 +11,6 @@ namespace Piwik\Plugins\IPtoCompany;
 use Piwik\Db;
 use Piwik\Common;
 use Piwik\DataTable;
-use Piwik\DataTable\Row;
 use Piwik\Piwik;
 use Piwik\API\Request;
 use Piwik\Plugins\IPtoCompany\Libraries\IPInfo;
@@ -52,7 +51,7 @@ class API extends \Piwik\Plugin\API
     {
         Piwik::checkUserHasViewAccess($idSite);
 
-        $logger = $this->staticContainer->getContainer()->get('Psr\Log\LoggerInterface');
+        $logger = $this->staticContainer->getContainer()->get(\Piwik\Log\LoggerInterface::class);
 
         $response = Request::processRequest('Live.getLastVisitsDetails', [
             'idSite'                => $idSite,
