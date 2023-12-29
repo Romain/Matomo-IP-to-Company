@@ -1,1 +1,25 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Hiria",
+        "Companies": "Enpresak",
+        "CompaniesReportSubject": "[%1$s] Eguneroko txostena / Enpresak",
+        "Company": "Enpresa",
+        "Country": "Herrialdea",
+        "Device": "Gailua",
+        "FindBelowCompaniesReport": "Behean aurkituko duzu atzoko Enpresen txostena.",
+        "HaveANiceDay": "Egun ona izan dezazula!",
+        "Hi": "Kaixo,",
+        "LastVisit": "Azken bisita",
+        "LastVisitDuration": "Azken bisitaren iraupena",
+        "LifeTimeOfCacheForResultsInWeeks": "Itzulitako emaitzak cache-an zenbat astez gorde behar diren.",
+        "NoOneVisitedWebsiteYesterday": "Sentitzen dugu, baina inork ez zuen zure webgunea bisitatu atzo…",
+        "NumberOfVisits": "Bisita-kopurua",
+        "PasteYourAccessToken": "Itsatsi beheko eremuan zure sarbide-tokena.",
+        "ReferrerName": "Erreferentzia-egilearen izena",
+        "ReferrerType": "Erreferentzia-egile mota",
+        "SubscribeToEmailReport": "Harpidetu posta elektronikoko txostenetara",
+        "Type": "Mota",
+        "WantToReceiveDailyReport": "Eguneroko txostenak jaso nahi ditut posta elektronikoz nire webguneak bisitatu dituzten enpresen izenekin.",
+        "YourIPInfoAccessToken": "Zure IPinfo.io sarbide-tokena"
+    }
+}
