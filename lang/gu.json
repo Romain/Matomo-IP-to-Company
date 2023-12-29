@@ -1,0 +1,25 @@
+{
+    "IPtoCompany": {
+        "City": "શહેર",
+        "Companies": "કંપનીઓ",
+        "CompaniesReportSubject": "[%1$s] તમારો દૈનિક અહેવાલ / કંપનીઓ",
+        "Company": "કંપની",
+        "Country": "દેશ",
+        "Device": "ડિવાઇસ",
+        "FindBelowCompaniesReport": "તમને ગઈકાલના દિવસ માટે કંપની રિપોર્ટ નીચે મળશે.",
+        "HaveANiceDay": "તમારો દિવસ શુભ રહે!",
+        "Hi": "નમસ્તે,",
+        "LastVisit": "છેલ્લી મુલાકાત",
+        "LastVisitDuration": "છેલ્લી મુલાકાતનો સમયગાળો",
+        "LifeTimeOfCacheForResultsInWeeks": "અઠવાડિયાની સંખ્યા કે જે દરમિયાન પરિણામો પાછા ફર્યા તે કૅશમાં હોવું આવશ્યક છે.",
+        "NoOneVisitedWebsiteYesterday": "અમે દિલગીર છીએ, પરંતુ ગઈકાલે કોઈએ તમારી વેબસાઇટની મુલાકાત લીધી નથી…",
+        "NumberOfVisits": "મુલાકાતોની સંખ્યા",
+        "PasteYourAccessToken": "તમારા એક્સેસ ટોકન નીચે ફીલ્ડમાં પેસ્ટ કરો.",
+        "ReferrerName": "રેફરર નામ",
+        "ReferrerType": "રેફરર પ્રકાર",
+        "SubscribeToEmailReport": "ઇમેઇલ રિપોર્ટ્સ પર સબ્સ્ક્રાઇબ કરો",
+        "Type": "પ્રકાર",
+        "WantToReceiveDailyReport": "હું મારી વેબસાઇટ્સની મુલાકાત લેનાર કંપનીના નામ સાથે ઇમેઇલ દ્વારા દૈનિક અહેવાલો પ્રાપ્ત કરવા માંગુ છું.",
+        "YourIPInfoAccessToken": "તમારો IPinfo.io એક્સેસ ટોકન"
+    }
+}
