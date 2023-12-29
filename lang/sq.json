@@ -1,1 +1,25 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Qytet",
+        "Companies": "Shoqëri",
+        "CompaniesReportSubject": "[%1$s] Raportet tuaj të përditshëm / Shoqëri",
+        "Company": "Shoqëri",
+        "Country": "Vend",
+        "Device": "Pajisje",
+        "FindBelowCompaniesReport": "Më poshtë do të gjeni Raport Shoqërish për ditën e djeshme.",
+        "HaveANiceDay": "Ditë të mbarë!",
+        "Hi": "Njatjeta,",
+        "LastVisit": "Vizita e fundit",
+        "LastVisitDuration": "Kohëzgjatje e vizitës së fundit",
+        "LifeTimeOfCacheForResultsInWeeks": "Numër javësh gjatë të cilave duhen ruajtur në fshehtinë përfundimet e sjella.",
+        "NoOneVisitedWebsiteYesterday": "Na ndjeni, por sajtin tuaj s’e vizitoi kush dje…",
+        "NumberOfVisits": "Numër vizitash",
+        "PasteYourAccessToken": "Ngjitni te fusha më poshtë token-in tuaj të hyrjeve.",
+        "ReferrerName": "Emër referuesi",
+        "ReferrerType": "Lloj referuesi",
+        "SubscribeToEmailReport": "Pajtohuni te raporte me email",
+        "Type": "Lloj",
+        "WantToReceiveDailyReport": "Dua të marr raporte të përditshëm me email me emrin e shoqërisë që vizitoi sajtet e mi.",
+        "YourIPInfoAccessToken": "Token-i juaj IPinfo.io i hyrjeve"
+    }
+}
