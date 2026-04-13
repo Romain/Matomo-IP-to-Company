@@ -1,1 +1,25 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Cathair",
+        "Companies": "Cuideachtaí",
+        "CompaniesReportSubject": "[%1$s] Do thuairisc laethúil / Cuideachtaí",
+        "Company": "Cuideachta",
+        "Country": "Tír",
+        "Device": "Gléas",
+        "FindBelowCompaniesReport": "Gheobhaidh tú thíos Tuarascáil na gCuideachtaí don lá inné.",
+        "HaveANiceDay": "Lá maith agat!",
+        "Hi": "Haigh,",
+        "LastVisit": "Cuairt dheireanach",
+        "LastVisitDuration": "Fad na cuairte deiridh",
+        "LifeTimeOfCacheForResultsInWeeks": "An líon seachtainí ina gcaithfear na torthaí a chuirtear ar ais a thaisceadh.",
+        "NoOneVisitedWebsiteYesterday": "Tá brón orainn, ach níor thug éinne cuairt ar do shuíomh Gréasáin inné…",
+        "NumberOfVisits": "Líon na gcuairteanna",
+        "PasteYourAccessToken": "Greamaigh sa réimse faoi do chomhartha rochtana.",
+        "ReferrerName": "Ainm an tarchuir",
+        "ReferrerType": "Cineál atreoraithe",
+        "SubscribeToEmailReport": "Liostáil leis na tuarascálacha ríomhphoist",
+        "Type": "Cineál",
+        "WantToReceiveDailyReport": "Ba mhaith liom na tuarascálacha laethúla a fháil trí ríomhphost le hainm na cuideachta a thug cuairt ar mo láithreáin ghréasáin.",
+        "YourIPInfoAccessToken": "Do chomhartha rochtana IPinfo.io"
+    }
+}

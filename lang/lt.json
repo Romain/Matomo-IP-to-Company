@@ -1,1 +1,12 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Miestas",
+        "Company": "Bendrovė",
+        "Country": "Šalis",
+        "Device": "Įrenginys",
+        "Hi": "Labas",
+        "LastVisit": "Paskutinis apsilankymas",
+        "NumberOfVisits": "Apsilankymų kiekis",
+        "Type": "Tipas"
+    }
+}

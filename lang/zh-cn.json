@@ -1,1 +1,10 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "城市",
+        "Country": "国家",
+        "Device": "设备",
+        "LastVisit": "最后访问",
+        "NumberOfVisits": "访问次数",
+        "Type": "类型"
+    }
+}

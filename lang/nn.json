@@ -1,1 +1,7 @@
-{}
+{
+    "IPtoCompany": {
+        "Country": "Land",
+        "NumberOfVisits": "Tal på vitjingar",
+        "Type": "Type"
+    }
+}

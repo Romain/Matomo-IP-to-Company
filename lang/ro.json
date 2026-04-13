@@ -1,1 +1,10 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Oraş",
+        "Country": "Ţară",
+        "Device": "Dispozitiv",
+        "LastVisit": "Ultima vizita",
+        "NumberOfVisits": "Numar de vizite",
+        "Type": "Tip"
+    }
+}

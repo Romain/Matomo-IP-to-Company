@@ -1,1 +1,10 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Lungsod",
+        "Country": "Bansa",
+        "Device": "Aparato",
+        "LastVisit": "Huling pagbisita",
+        "NumberOfVisits": "Bilang ng mga bumisita",
+        "Type": "Uri"
+    }
+}

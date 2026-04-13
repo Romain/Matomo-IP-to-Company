@@ -1,1 +1,8 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Mesto",
+        "Country": "Država",
+        "NumberOfVisits": "Število obiskov",
+        "Type": "Tip"
+    }
+}

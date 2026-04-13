@@ -1,1 +1,7 @@
-{}
+{
+    "IPtoCompany": {
+        "Country": "Valsts",
+        "NumberOfVisits": "Apmeklējumu skaits",
+        "Type": "Tips"
+    }
+}

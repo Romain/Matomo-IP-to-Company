@@ -1,1 +1,25 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Grad",
+        "Companies": "Tvrtke",
+        "CompaniesReportSubject": "[%1$s] Tvoj dnevni izvještaj / Tvrtke",
+        "Company": "Tvrtka",
+        "Country": "Zemlja",
+        "Device": "Uređaj",
+        "FindBelowCompaniesReport": "U nastavku možete pronaći izvještaj tvrtke za jučerašnji dan.",
+        "HaveANiceDay": "Ugodan dan!",
+        "Hi": "Zdravo,",
+        "LastVisit": "Zadnja posjeta",
+        "LastVisitDuration": "Trajanje zadnjeg posjeta",
+        "LifeTimeOfCacheForResultsInWeeks": "Broj tjedana tijekom kojih se vraćeni rezultati moraju spremiti u predmemoriju.",
+        "NoOneVisitedWebsiteYesterday": "Žao nam je, ali jučer nitko nije posjetio tvoju web-stranicu …",
+        "NumberOfVisits": "Broj posjeta",
+        "PasteYourAccessToken": "Umetni u polje ispod tvog pristupnog tokena.",
+        "ReferrerName": "Ime uputitelja",
+        "ReferrerType": "Vrsta uputitelja",
+        "SubscribeToEmailReport": "Pretplati se na izvještaje putem e-pošte",
+        "Type": "Vrsta",
+        "WantToReceiveDailyReport": "Želim primati dnevne izvještaje putem e-pošte s imenom tvrtke koja je posjetila moje web-stranice.",
+        "YourIPInfoAccessToken": "Tvoj pristupni token za IPinfo.io"
+    }
+}

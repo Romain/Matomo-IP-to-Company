@@ -12,14 +12,14 @@
         "LastVisit": "Son ziyaret",
         "LastVisitDuration": "Son ziyaret süresi",
         "LifeTimeOfCacheForResultsInWeeks": "Döndürülen sonuçların ön belleğe alınacağı hafta sayısı.",
-        "NoOneVisitedWebsiteYesterday": "Maalesef, dün hiç kimse web sitenizi ziyaret etmemiş…",
+        "NoOneVisitedWebsiteYesterday": "Ne yazık ki dün hiç kimse sitenizi ziyaret etmemiş…",
         "NumberOfVisits": "Ziyaret sayısı",
         "PasteYourAccessToken": "Erişim kodunun altındaki alana yapıştırın.",
         "ReferrerName": "Yönlendiren adı",
         "ReferrerType": "Yönlendiren türü",
         "SubscribeToEmailReport": "E-posta raporlarına abone ol",
         "Type": "Tür",
-        "WantToReceiveDailyReport": "Web sitelerimi ziyaret eden kuruluşun adıyla e-posta ile günlük raporlar almak istiyorum.",
+        "WantToReceiveDailyReport": "Sitelerimi ziyaret eden kuruluşun adıyla günlük rapor e-postaları almak istiyorum.",
         "YourIPInfoAccessToken": "IPinfo.io erişim kodunuz"
     }
 }

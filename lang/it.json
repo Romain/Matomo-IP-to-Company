@@ -12,6 +12,14 @@
         "LastVisit": "Ultima visita",
         "LastVisitDuration": "Durata ultima visita",
         "LifeTimeOfCacheForResultsInWeeks": "Numero di settimane durante le quali i risultati restituiti devono essere memorizzati nella cache.",
-        "NoOneVisitedWebsiteYesterday": "Siamo spiacenti, ma nessuno ha visitato il tuo sito web ieri…"
+        "NoOneVisitedWebsiteYesterday": "Siamo spiacenti, ma nessuno ha visitato il tuo sito web ieri…",
+        "NumberOfVisits": "Conteggio visite",
+        "PasteYourAccessToken": "Incolla il tuo access token nel campo seguente.",
+        "ReferrerName": "Nome del referrer",
+        "ReferrerType": "Tipologia referrer",
+        "SubscribeToEmailReport": "Iscriviti ai report via email",
+        "Type": "Tipologia",
+        "WantToReceiveDailyReport": "Voglio ricevere i rapporti quotidiani via email con il nome delle aziende che han visitato il miei siti web.",
+        "YourIPInfoAccessToken": "Acess token del tuo account IPinfo.io"
     }
 }

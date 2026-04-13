@@ -1,1 +1,6 @@
-{}
+{
+    "IPtoCompany": {
+        "Country": "País",
+        "NumberOfVisits": "Número de Visitas"
+    }
+}

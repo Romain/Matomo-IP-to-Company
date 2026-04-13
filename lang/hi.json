@@ -1,1 +1,10 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "शहर",
+        "Country": "देश",
+        "Device": "न्यूनतम मूल्य",
+        "LastVisit": "अंतिम विजिट",
+        "NumberOfVisits": "आवागमनों की संख्या",
+        "Type": "प्रकार"
+    }
+}

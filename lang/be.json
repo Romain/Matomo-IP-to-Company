@@ -1,1 +1,7 @@
-{}
+{
+    "IPtoCompany": {
+        "Country": "Краіна",
+        "NumberOfVisits": "Колькасць наведванняў",
+        "Type": "Тып"
+    }
+}

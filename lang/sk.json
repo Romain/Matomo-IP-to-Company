@@ -1,1 +1,9 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Mesto",
+        "Country": "Krajina",
+        "LastVisit": "Posledná návšteva",
+        "NumberOfVisits": "Počet návštev",
+        "Type": "Typ"
+    }
+}

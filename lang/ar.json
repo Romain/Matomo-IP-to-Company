@@ -1,1 +1,9 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "المدينة",
+        "Country": "الدولة",
+        "Device": "الجهاز",
+        "NumberOfVisits": "عدد الزيارات",
+        "Type": "النوع"
+    }
+}

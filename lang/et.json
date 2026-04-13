@@ -1,1 +1,10 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Linn",
+        "Country": "Riik",
+        "Device": "Seade",
+        "LastVisit": "Viimane külastus",
+        "NumberOfVisits": "Külastuste arv",
+        "Type": "Tüüp"
+    }
+}

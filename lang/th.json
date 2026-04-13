@@ -1,1 +1,8 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "เมือง",
+        "Country": "ประเทศ",
+        "NumberOfVisits": "จำนวนการเข้าชม",
+        "Type": "รูปแบบ"
+    }
+}

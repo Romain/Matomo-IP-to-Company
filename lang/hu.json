@@ -1,1 +1,8 @@
-{}
+{
+    "IPtoCompany": {
+        "Country": "Ország",
+        "LastVisit": "Utolsó látogatás",
+        "NumberOfVisits": "Látogatások száma",
+        "Type": "Típus"
+    }
+}

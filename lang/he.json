@@ -1,1 +1,7 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "עיר",
+        "Country": "מדינה",
+        "NumberOfVisits": "מספר ביוקרים"
+    }
+}

@@ -1,1 +1,9 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Thành phố",
+        "Country": "Quốc gia",
+        "LastVisit": "Lượt truy cập cuối cùng",
+        "NumberOfVisits": "Số lượt truy cập",
+        "Type": "Kiểu"
+    }
+}

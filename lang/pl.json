@@ -1,1 +1,11 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Miasto",
+        "Company": "Firma",
+        "Country": "Kraj",
+        "Device": "Urządzenie",
+        "LastVisit": "Ostatnia wizyta",
+        "NumberOfVisits": "Ilość odwiedzin",
+        "Type": "Typ"
+    }
+}

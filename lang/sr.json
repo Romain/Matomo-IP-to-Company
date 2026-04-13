@@ -1,1 +1,10 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Grad",
+        "Country": "Zemlja",
+        "Device": "Uređaj",
+        "LastVisit": "Poslednja poseta",
+        "NumberOfVisits": "Broj poseta",
+        "Type": "Tip"
+    }
+}

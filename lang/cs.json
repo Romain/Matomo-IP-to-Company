@@ -1,1 +1,23 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Město",
+        "Companies": "Společnosti",
+        "CompaniesReportSubject": "[%1$s] Vaše denní hlášení / Společnosti",
+        "Company": "Společnost",
+        "Country": "Země",
+        "Device": "Zařízení",
+        "FindBelowCompaniesReport": "Níže naleznete zprávu o společnostech za včerejší den.",
+        "HaveANiceDay": "Hezký den!",
+        "Hi": "Ahoj,",
+        "LastVisit": "Poslední návštěva",
+        "LastVisitDuration": "Doba trvání poslední návštěvy",
+        "LifeTimeOfCacheForResultsInWeeks": "Počet týdnů, během nichž musí být vrácené výsledky uloženy v mezipaměti.",
+        "NoOneVisitedWebsiteYesterday": "Je nám líto, ale vaše webové stránky včera nikdo nenavštívil…",
+        "NumberOfVisits": "Počet návštěv",
+        "PasteYourAccessToken": "Vložte do pole pod přístupovým tokenem.",
+        "SubscribeToEmailReport": "Přihlaste se k odběru e-mailových zpráv",
+        "Type": "Typ",
+        "WantToReceiveDailyReport": "Chci dostávat denní zprávy e-mailem s názvem společnosti, která navštívila mé webové stránky.",
+        "YourIPInfoAccessToken": "Váš přístupový token IPinfo.io"
+    }
+}

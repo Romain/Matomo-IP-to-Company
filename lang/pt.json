@@ -1,1 +1,25 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Cidade",
+        "Companies": "Empresas",
+        "CompaniesReportSubject": "[%1$s] Seu relatório diário / Empresas",
+        "Company": "Empresa",
+        "Country": "País",
+        "Device": "Dispositivo",
+        "FindBelowCompaniesReport": "Segue abaixo o Balanço das Empresas do dia de ontem.",
+        "HaveANiceDay": "Tenha um bom dia!",
+        "Hi": "Oi,",
+        "LastVisit": "Última visita",
+        "LastVisitDuration": "Duração da última visita",
+        "LifeTimeOfCacheForResultsInWeeks": "Número de semanas durante as quais os resultados retornados devem ser armazenados em cache.",
+        "NoOneVisitedWebsiteYesterday": "Lamentamos, mas ninguém visitou seu site ontem…",
+        "NumberOfVisits": "Número de visitas",
+        "PasteYourAccessToken": "Cole no campo abaixo do seu token de acesso.",
+        "ReferrerName": "Nome do referenciador",
+        "ReferrerType": "Tipo de referenciador",
+        "SubscribeToEmailReport": "Assinar os relatórios de e-mail",
+        "Type": "Tipo",
+        "WantToReceiveDailyReport": "Desejo receber os relatórios diários por e-mail com o nome da empresa que visitou meus sites.",
+        "YourIPInfoAccessToken": "Seu token de acesso IPinfo.io"
+    }
+}

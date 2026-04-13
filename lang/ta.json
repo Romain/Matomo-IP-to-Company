@@ -1,1 +1,25 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "நகரம்",
+        "Companies": "நிறுவனங்கள்",
+        "CompaniesReportSubject": "[%1$s] உங்கள் நாள்தோறும் அறிக்கை / நிறுவனங்கள்",
+        "Company": "நிறுவனம்",
+        "Country": "நாடு",
+        "Device": "சாதனம்",
+        "FindBelowCompaniesReport": "நேற்றைய தினத்திற்கான நிறுவனங்களின் அறிக்கையை கீழே காணலாம்.",
+        "HaveANiceDay": "ஒரு நல்ல நாள்!",
+        "Hi": "ஆய்,",
+        "LastVisit": "கடைசி வருகை",
+        "LastVisitDuration": "கடைசி வருகை காலம்",
+        "LifeTimeOfCacheForResultsInWeeks": "முடிவுகள் திரும்பிய வாரங்களின் எண்ணிக்கை தற்காலிக சேமிப்பாக இருக்க வேண்டும்.",
+        "NoOneVisitedWebsiteYesterday": "மன்னிக்கவும், ஆனால் நேற்று யாரும் உங்கள் வலைத்தளத்தைப் பார்வையிடவில்லை…",
+        "NumberOfVisits": "வருகைகளின் எண்ணிக்கை",
+        "PasteYourAccessToken": "உங்கள் அணுகல் டோக்கனுக்குக் கீழே உள்ள புலத்தில் ஒட்டவும்.",
+        "ReferrerName": "குறிப்பு பெயர்",
+        "ReferrerType": "குறிப்பு வகை",
+        "SubscribeToEmailReport": "மின்னஞ்சல் அறிக்கைகளுக்கு குழுசேரவும்",
+        "Type": "வகை",
+        "WantToReceiveDailyReport": "எனது வலைத்தளங்களைப் பார்வையிட்ட நிறுவனத்தின் பெயருடன் நாள்தோறும் அறிக்கைகளை மின்னஞ்சல் மூலம் பெற விரும்புகிறேன்.",
+        "YourIPInfoAccessToken": "உங்கள் ipinfo.io அணுகல் கிள்ளாக்கு"
+    }
+}

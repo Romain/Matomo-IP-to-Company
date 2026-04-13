@@ -1,1 +1,13 @@
-{}
+{
+    "IPtoCompany": {
+        "City": "Kaupunki",
+        "Companies": "Yritykset",
+        "Company": "Yritys",
+        "Country": "Maa",
+        "Device": "Laite",
+        "HaveANiceDay": "Hyvää päivänjatkoa!",
+        "LastVisit": "Edellinen käynti",
+        "NumberOfVisits": "Käyntien lukumäärä",
+        "Type": "Tyyppi"
+    }
+}
